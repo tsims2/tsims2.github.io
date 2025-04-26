@@ -1,0 +1,5 @@
+title: “Tyler Sims • Data Science Portfolio”
+description: “Energy forecasting, automation, and analytics”
+theme: minima
+plugins:
+  - jekyll-feed
