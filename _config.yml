@@ -1,5 +1,18 @@
-title: “Tyler Sims • Data Science Portfolio”
-description: “Energy forecasting, automation, and analytics”
+# Site settings
+title: "Tyler Sims • Data Science Portfolio"
+description: "Energy forecasting, automation, and analytics"
+url: "https://tyler-sims.github.io"
+baseurl: ""  # no subpath
+
+author:
+  name: "Tyler Sims"
+  email: "tyler.jsims97@gmail.com"
+
+# Jekyll configuration
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown

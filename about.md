@@ -1,19 +1,22 @@
-layout: page
+---
+layout: default
 title: About
 permalink: /about/
 ---
 
-Hi, I’m **Tyler Sims**—an Operations Analyst at CPower Energy on a mission to step into Data Science leadership.
+## About Me
 
-With a Master’s in Public Policy (Columbia) and 12 months of full-stack energy data automation (2 – 3 million rows/month per database), I:
+I’m **Tyler Sims**, an Operations Analyst at CPower Energy, where I architect and automate data solutions for ISO-NE and other regional markets.
 
-- 🚀 Build Python pipelines & Azure SQL systems for ISO-NE, PJM, ERCOT, CAISO, MISO  
-- 📊 Develop Power BI dashboards adopted by analysts, sales teams, and engineers  
-- 🔮 Forecast load with neural-net models and craft real-time CO₂ emissions indices  
-- ☁️ Integrate CI/CD (GitHub Actions), containerization (Docker), and MLOps best practices  
-- 🤝 Collaborate cross-functionally to replace legacy processes with lean, scalable tools  
+**Background & Education:**
+- 🎓 Master’s in Public Policy (Education & Data Analysis), Columbia University
+- 📚 B.A. in Economics, University of Michigan
 
-When I’m not automating data flows, you’ll find me tinkering with new forecasting architectures, exploring Jupyter-centric MLOps, or walking my dogs around NYC.  
+**Experience Highlights:**
+- 🚀 Built Python modules and Azure SQL pipelines ingesting **2–3 million rows/month**
+- 📊 Developed Power BI dashboards for analysts, sales teams, and engineers
+- 🔮 Designed neural-net forecasting models with **2.3% test MAPE** on NYISO load data
+- 🌐 Integrated Clean Peak Energy and Demand Response reporting tools
+- 🤝 Cross-functional collaborations with engineering, legal, and market teams
 
-Feel free to browse my Projects page or drop me a line!  
-
+When I’m not coding, you’ll find me walking my dogs around NYC, volunteering for local policy initiatives, or diving into advanced time-series research
