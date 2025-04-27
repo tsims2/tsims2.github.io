@@ -6,7 +6,7 @@ permalink: /
 
 <section class="hero" id="home">
   <div class="container">
-    <h1>Tyler Sims</h1>
+    <h1>Tyler Joe Sims</h1>
     <p>Operations Analyst & Data Science Leader • Energy Markets Expert • Automation Architect</p>
     <div class="hero-buttons">
       <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View Projects</a>
@@ -81,9 +81,9 @@ permalink: /
     <h2>Let's Connect</h2>
     <p>Interested in discussing data science initiatives, energy markets, or automation solutions? I'm always open to new opportunities and collaborations.</p>
     <div class="social-links">
-      <a href="https://github.com/tyler-sims" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/tylersims" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="mailto:tyler.sims@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/tsims2" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/tsims2" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:tyler.jsims97@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
 </section>
