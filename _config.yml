@@ -3,3 +3,7 @@ description: "Energy forecasting, automation, and analytics"
 author: "Tyler Sims"
 url: "https://tsims2.github.io"
 baseurl: ""
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
