@@ -14,13 +14,13 @@ Reducing transportation emissions starts with knowing when the grid is cleanest.
 
 2. **Index Computation**  
    - Weighted average CO₂ intensity per hour  
-   - Rolling 24‑hour visualization for EV charging guidance
+   - Rolling 24-hour visualization for EV charging guidance
 
 3. **Dashboard**  
    - Power BI with embedded iframe and color-coded timeline
 
 4. **Outcomes**  
-   - Guides drivers to low‑carbon charging windows  
+   - Guides drivers to low-carbon charging windows  
    - Achieved **12% CO₂ reduction** in pilot trials
 
 🔗 [Code & Docs →](https://github.com/tyler-sims/iso-ne-emissions-index)
