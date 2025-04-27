@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-<section class="page-header">
+<section class="page-header projects-header">
   <h1>Featured Projects</h1>
   <p>Portfolio highlights: automation, forecasting, and data integration.</p>
 </section>

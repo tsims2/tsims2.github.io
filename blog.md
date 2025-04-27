@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-<section class="page-header">
+<section class="page-header blog-header">
   <h1>Latest Posts</h1>
   <p>Deep dives into forecasting, emissions, and energy analytics.</p>
 </section>
