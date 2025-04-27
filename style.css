@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #548050;       /* Medium forest green */
-  --secondary-color: #2A5427;     /* Dark forest green */
-  --accent-color: #8CAB89;        /* Medium sage green */
-  --light-green: #B5D4B2;         /* Light sage green */
-  --lighter-green: #B2FFAB;       /* Bright mint green */
-  --text-color: #12330F;          /* Very dark green */
-  --light-gray: #f4f7f3;          /* Slightly green-tinted gray */
-  --border-color: #d4e4d1;        /* Light green border */
+  --primary-color: #A0DB87;       /* Light green from swatches */
+  --secondary-color: #475C3E;     /* Dark green from swatches */
+  --accent-color: #DB88D5;        /* Purple from swatches */
+  --light-green: #8D9C87;         /* Grayish green from swatches */
+  --light-purple: #867285;        /* Grayish purple from swatches */
+  --text-color: #331A31;          /* Dark purple from swatches */
+  --light-gray: #f7f5f7;          /* Light gray with purple tint */
+  --border-color: #8D9C87;        /* Using grayish green for borders */
 }
 
 /* Global */
@@ -20,7 +20,7 @@ body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-color);
   line-height: 1.7;
-  background: var(--lighter-green);
+  background: #f7f5f7; /* Light background with subtle purple tint */
 }
 
 .container { 
@@ -107,7 +107,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(181, 212, 178, 0.9), rgba(140, 171, 137, 0.9));
+  background: linear-gradient(135deg, rgba(160, 219, 135, 0.9), rgba(141, 156, 135, 0.9));
   z-index: 1;
 }
 
@@ -277,7 +277,7 @@ nav {
   align-items: flex-start; 
   padding: 1rem;
   font-size: 1.1rem;
-  background: rgba(181, 212, 178, 0.95);
+  background: rgba(134, 114, 133, 0.15);
   border-radius: .5rem;
   transition: all 0.3s;
 }
@@ -306,7 +306,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(181, 212, 178, 0.92);
+  background: rgba(141, 156, 135, 0.92);
   z-index: 1;
 }
 
@@ -336,7 +336,7 @@ nav {
 
 .project-image {
   height: 220px; 
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -448,7 +448,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(181, 212, 178, 0.92);
+  background: rgba(134, 114, 133, 0.92);
   z-index: 1;
 }
 
@@ -511,7 +511,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(181, 212, 178, 0.9), rgba(140, 171, 137, 0.9));
+  background: linear-gradient(135deg, rgba(141, 156, 135, 0.9), rgba(71, 92, 62, 0.9));
   z-index: 1;
 }
 
