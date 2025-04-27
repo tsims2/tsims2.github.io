@@ -18,7 +18,7 @@ permalink: /
 <section class="about" id="about">
   <div class="container about-content">
     <h2>About Me</h2>
-    <p>As an Operations Analyst at CPower Energy, I’ve built scalable, user-friendly automation handling 2–3 million rows/month. With a Master’s in Data Science, I specialize in:</p>
+    <p>As an Operations Analyst at CPower Energy, I’ve built scalable, user-friendly automations handling 2–3 million rows/month. With a Master’s in Data Science, I specialize in:</p>
     <ul class="skills-list">
       <li>Python pipelines & Azure SQL for ISO-NE, PJM, ERCOT, CAISO, MISO</li>
       <li>Power BI dashboards used by analysts, sales, and engineers</li>
@@ -33,7 +33,7 @@ permalink: /
 <section class="contact" id="contact">
   <div class="container contact-content">
     <h2>Get in Touch</h2>
-    <p>Always open to new projects, collaboration, or a quick chat about energy data!</p>
+    <p>I’m always open to new projects, collaboration, or a quick chat about energy data!</p>
     <div class="social-links">
       <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
