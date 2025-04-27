@@ -107,7 +107,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(160, 219, 135, 0.9), rgba(141, 156, 135, 0.9));
+  background: rgba(160, 219, 135, 0.9); /* Flat light green with transparency */
   z-index: 1;
 }
 
@@ -120,9 +120,7 @@ nav {
   font-size: 3.5rem; 
   font-weight: 700; 
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--secondary-color); /* Flat color instead of gradient */
 }
 
 .hero p { 
@@ -181,14 +179,15 @@ nav {
 
 .btn-primary { 
   background: var(--primary-color); 
-  color: white;
-  box-shadow: 0 4px 6px -1px rgba(84, 128, 80, 0.2);
+  color: var(--text-color); /* Better contrast on light green */
+  box-shadow: 0 4px 6px -1px rgba(134, 114, 133, 0.2);
 }
 
 .btn-primary:hover { 
   background: var(--secondary-color);
+  color: white; /* Better contrast on hover */
   transform: translateY(-2px);
-  box-shadow: 0 8px 12px -2px rgba(84, 128, 80, 0.3);
+  box-shadow: 0 8px 12px -2px rgba(134, 114, 133, 0.3);
 }
 
 .btn-secondary {
@@ -235,6 +234,7 @@ nav {
   font-size: 2.75rem; 
   margin-bottom: 2rem; 
   text-align: center;
+  color: var(--secondary-color); /* Flat color */
 }
 
 .stats-grid {
@@ -336,7 +336,7 @@ nav {
 
 .project-image {
   height: 220px; 
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  background: var(--accent-color); /* Flat purple color */
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -463,6 +463,7 @@ nav {
 .contact-content h2 {
   font-size: 2.75rem;
   margin-bottom: 1.5rem;
+  color: white; /* Flat color for better contrast on darker background */
 }
 
 .social-links {
@@ -511,7 +512,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(141, 156, 135, 0.9), rgba(71, 92, 62, 0.9));
+  background: rgba(141, 156, 135, 0.9); /* Flat grayish green with transparency */
   z-index: 1;
 }
 
@@ -525,9 +526,7 @@ nav {
   font-size: 3rem; 
   font-weight: 700; 
   margin-bottom: .75rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--secondary-color); /* Flat color instead of gradient */
 }
 
 .page-header p { 
