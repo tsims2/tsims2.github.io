@@ -334,14 +334,28 @@ nav {
   box-shadow: 0 12px 24px rgba(84, 128, 80, 0.15);
 }
 
+/* Project Image with Featured Image */
 .project-image {
-  height: 220px; 
-  background: var(--accent-color); /* Flat purple color */
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: white; 
+  height: 220px;
+  background: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   font-size: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.project-card:hover .project-featured-image {
+  transform: scale(1.05);
 }
 
 .project-content { 
@@ -395,12 +409,34 @@ nav {
   gap: 2rem;
 }
 
+/* Blog Card with Featured Image */
 .blog-card {
   border: 1px solid var(--border-color); 
   border-radius: 1rem; 
-  padding: 2rem;
+  overflow: hidden;
   transition: all .3s;
   background: rgba(255, 255, 255, 0.95);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.blog-card:hover .blog-featured-image {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 2rem;
 }
 
 .blog-card:hover { 
@@ -534,6 +570,39 @@ nav {
   color: var(--text-color);
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Featured Images for Detail Pages */
+.project-detail-image,
+.blog-detail-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.project-detail-image img,
+.blog-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* With image, we need stronger overlay for readability */
+.page-header.projects-header,
+.page-header.blog-header {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make sure content is above image */
+.page-header h1,
+.page-header p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .projects-header {

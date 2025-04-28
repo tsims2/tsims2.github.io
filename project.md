@@ -14,7 +14,11 @@ permalink: /projects/
     {% for p in site.projects %}
     <div class="project-card">
       <div class="project-image">
-        <i class="fas fa-{{ p.icon }}"></i>
+        {% if p.image %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" class="project-featured-image">
+        {% else %}
+          <i class="fas fa-{{ p.icon }}"></i>
+        {% endif %}
       </div>
       <div class="project-content">
         <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>

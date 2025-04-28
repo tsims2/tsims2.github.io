@@ -70,11 +70,15 @@ permalink: /
       {% for p in site.projects limit:3 %}
       <div class="project-card">
         <div class="project-image">
-          <i class="fas fa-{{ p.icon }}"></i>
+          {% if p.image %}
+            <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" class="project-featured-image">
+          {% else %}
+            <i class="fas fa-{{ p.icon }}"></i>
+          {% endif %}
         </div>
         <div class="project-content">
           <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-          <p>{{ p.excerpt | strip_html | truncate: 100 }}</p>
+          <p>{{ p.description | strip_html | truncate: 150 }}</p>
           <a href="{{ p.url | relative_url }}" class="btn btn-primary">View Project</a>
         </div>
       </div>
@@ -92,10 +96,17 @@ permalink: /
     <div class="blog-grid">
       {% for post in site.posts limit:2 %}
       <div class="blog-card">
-        <div class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-        <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+        {% if post.image %}
+          <div class="blog-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-featured-image">
+          </div>
+        {% endif %}
+        <div class="blog-content">
+          <div class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+        </div>
       </div>
       {% endfor %}
     </div>

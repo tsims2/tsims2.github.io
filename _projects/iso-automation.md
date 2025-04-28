@@ -3,6 +3,7 @@ layout: default
 title: "ISO Market Automation System"
 date: 2024-01-15
 icon: cogs
+image: "/images/projects/iso-automation.jpg"
 tags: ["automation", "python", "energy-markets", "azure"]
 description: "Engineered a comprehensive automation system processing 5M+ rows monthly across 6 ISO markets, reducing manual work by 90%."
 ---
