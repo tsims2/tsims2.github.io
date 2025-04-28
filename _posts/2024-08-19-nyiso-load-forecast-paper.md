@@ -54,7 +54,7 @@ excerpt: "Implemented neural network model for NYISO load forecasting, achieving
 
     <div style="text-align: center; margin-top: 3rem;">
       <a href="https://github.com/tyler-sims/energy-load-forecasting" class="btn btn-primary" style="margin-right: 1rem;">View Code</a>
-      <a href="https://github.com/tyler-sims/energy-load-forecasting/blob/main/docs/forecasting-paper.pdf" class="btn btn-secondary" style="margin-right: 1rem;">Read Paper</a>
+      <a href="https://www.linkedin.com/pulse/forecasting-energy-load-new-york-state-artificial-neural-tyler-sims-i9oke/?trackingId=11zWD%2FM8c9A1oVUm2khzXw%3D%3D" class="btn btn-secondary" style="margin-right: 1rem;">Read Paper</a>
       <a href="{{ '/projects/nyiso-load-forecasting/' | relative_url }}" class="btn btn-secondary">Project Details</a>
     </div>
   </div>
