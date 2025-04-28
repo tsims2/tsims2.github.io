@@ -315,10 +315,19 @@ nav {
   z-index: 2;
 }
 
-.project-grid {
+/* Ensure consistent card heights in grids */
+.project-grid,
+.blog-grid {
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
   gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-grid > *,
+.blog-grid > * {
+  display: flex;
+  height: 100%;
 }
 
 .project-card {
@@ -327,6 +336,9 @@ nav {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(84, 128, 80, 0.1);
   transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover { 
