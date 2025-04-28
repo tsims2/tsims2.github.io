@@ -96,11 +96,13 @@ permalink: /
     <div class="blog-grid">
       {% for post in site.posts limit:2 %}
       <div class="blog-card">
-        {% if post.image %}
-          <div class="blog-image">
+        <div class="blog-image">
+          {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-featured-image">
-          </div>
-        {% endif %}
+          {% else %}
+            <i class="fas fa-{% if post.icon %}{{ post.icon }}{% else %}newspaper{% endif %}"></i>
+          {% endif %}
+        </div>
         <div class="blog-content">
           <div class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</div>
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
