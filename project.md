@@ -11,23 +11,21 @@ permalink: /projects/
 
 <section class="projects">
   <div class="container project-grid">
-    {% for item in site.projects %}
-      <div class="card">
-        <div class="card-image">
-          {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
-          {% else %}
-            <i class="fas fa-{% if item.icon %}{{ item.icon }}{% else %}code{% endif %}"></i>
-          {% endif %}
-        </div>
-        <div class="card-content">
-          <h3 class="card-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="card-description">{{ item.description | strip_html | truncate: 150 }}</p>
-          <div class="card-action">
-            <a href="{{ item.url | relative_url }}" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
+    {% for p in site.projects %}
+    <div class="project-card">
+      <div class="project-image">
+        {% if p.image %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" class="project-featured-image">
+        {% else %}
+          <i class="fas fa-{{ p.icon }}"></i>
+        {% endif %}
       </div>
+      <div class="project-content">
+        <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <p>{{ p.description | strip_html | truncate: 150 }}</p>
+        <a href="{{ p.url | relative_url }}" class="btn btn-primary">View Project</a>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>
