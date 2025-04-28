@@ -67,21 +67,19 @@ permalink: /
   <div class="container">
     <h2 style="text-align: center; margin-bottom: 2rem;">Featured Projects</h2>
     <div class="project-grid">
-      {% for item in site.projects limit:3 %}
-      <div class="card">
-        <div class="card-image">
-          {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+      {% for p in site.projects limit:3 %}
+      <div class="project-card">
+        <div class="project-image">
+          {% if p.image %}
+            <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" class="project-featured-image">
           {% else %}
-            <i class="fas fa-{% if item.icon %}{{ item.icon }}{% else %}code{% endif %}"></i>
+            <i class="fas fa-{{ p.icon }}"></i>
           {% endif %}
         </div>
-        <div class="card-content">
-          <h3 class="card-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="card-description">{{ item.description | strip_html | truncate: 150 }}</p>
-          <div class="card-action">
-            <a href="{{ item.url | relative_url }}" class="btn btn-primary">View Project</a>
-          </div>
+        <div class="project-content">
+          <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          <p>{{ p.description | strip_html | truncate: 150 }}</p>
+          <a href="{{ p.url | relative_url }}" class="btn btn-primary">View Project</a>
         </div>
       </div>
       {% endfor %}
@@ -96,22 +94,20 @@ permalink: /
   <div class="container">
     <h2 style="text-align: center; margin-bottom: 2rem;">Featured Posts</h2>
     <div class="blog-grid">
-      {% for item in site.posts limit:2 %}
-      <div class="card">
-        <div class="card-image">
-          {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+      {% for post in site.posts limit:2 %}
+      <div class="blog-card">
+        <div class="blog-image">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-featured-image">
           {% else %}
-            <i class="fas fa-{% if item.icon %}{{ item.icon }}{% else %}newspaper{% endif %}"></i>
+            <i class="fas fa-{% if post.icon %}{{ post.icon }}{% else %}newspaper{% endif %}"></i>
           {% endif %}
         </div>
-        <div class="card-content">
-          <div class="card-meta">{{ item.date | date: "%B %-d, %Y" }}</div>
-          <h3 class="card-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="card-description">{{ item.excerpt | strip_html | truncate: 150 }}</p>
-          <div class="card-action">
-            <a href="{{ item.url | relative_url }}" class="btn btn-primary">Read More</a>
-          </div>
+        <div class="blog-content">
+          <div class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
         </div>
       </div>
       {% endfor %}

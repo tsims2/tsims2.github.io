@@ -11,24 +11,22 @@ permalink: /blog/
 
 <section class="blog">
   <div class="container blog-grid">
-    {% for item in site.posts %}
-      <div class="card">
-        <div class="card-image">
-          {% if item.image %}
-            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
-          {% else %}
-            <i class="fas fa-{% if item.icon %}{{ item.icon }}{% else %}newspaper{% endif %}"></i>
-          {% endif %}
-        </div>
-        <div class="card-content">
-          <div class="card-meta">{{ item.date | date: "%B %-d, %Y" }}</div>
-          <h3 class="card-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-          <p class="card-description">{{ item.excerpt | strip_html | truncate: 150 }}</p>
-          <div class="card-action">
-            <a href="{{ item.url | relative_url }}" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
+    {% for post in site.posts %}
+    <div class="blog-card">
+      <div class="blog-image">
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-featured-image">
+        {% else %}
+          <i class="fas fa-{% if post.icon %}{{ post.icon }}{% else %}newspaper{% endif %}"></i>
+        {% endif %}
       </div>
+      <div class="blog-content">
+        <div class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>
