@@ -26,9 +26,13 @@ permalink: /
 </section>
 
 <section class="about" id="about">
-  <div class="container about-content">
-    <h2>About Me</h2>
-    <p>An accomplished Operations Analyst and emerging Data Science leader with a proven track record of designing and implementing large-scale data infrastructure, automation pipelines, and analytical tools in the energy sector.</p>
+  <div class="container">
+    <div class="about-header">
+      <h2>About Me</h2>
+      <div class="about-intro">
+        <p>An accomplished Operations Analyst and emerging Data Science leader with a proven track record of designing and implementing large-scale data infrastructure, automation pipelines, and analytical tools in the energy sector.</p>
+      </div>
+    </div>
     
     <div class="stats-grid">
       <div class="stat-item">
@@ -45,20 +49,75 @@ permalink: /
       </div>
     </div>
 
-    <h3 style="text-align: center; margin: 3rem 0 1.5rem;">Core Competencies</h3>
-    <ul class="skills-list">
-      <li><strong>Programming & Data Engineering:</strong> Python (pandas, NumPy, SQLAlchemy), Azure SQL, PostgreSQL, Oracle, automation frameworks</li>
-      <li><strong>Analytics & Visualization:</strong> Power BI dashboards, DAX calculations, custom GUIs for non-technical users</li>
-      <li><strong>Cloud & Infrastructure:</strong> Microsoft Azure, multi-database architectures, private endpoint integration</li>
-      <li><strong>Energy Markets & Domain Expertise:</strong> ISO-NE, NYISO, CAISO, PJM, real-time load forecasting, emissions indexing</li>
-      <li><strong>Machine Learning & AI:</strong> Neural networks for load forecasting, real-time CO₂ emissions prediction, anomaly detection</li>
-      <li><strong>Automation & DevOps:</strong> CI/CD pipelines, Docker containers, MLOps best practices, automated compliance systems</li>
-    </ul>
+    <div class="about-content-grid">
+      <div class="about-content-column">
+        <h3>Core Competencies</h3>
+        <ul class="competencies-list">
+          <li>
+            <span class="competency-icon"><i class="fas fa-code"></i></span>
+            <div class="competency-content">
+              <h4>Programming & Data Engineering</h4>
+              <p>Python (pandas, NumPy, SQLAlchemy), Azure SQL, PostgreSQL, Oracle, automation frameworks</p>
+            </div>
+          </li>
+          <li>
+            <span class="competency-icon"><i class="fas fa-chart-bar"></i></span>
+            <div class="competency-content">
+              <h4>Analytics & Visualization</h4>
+              <p>Power BI dashboards, DAX calculations, custom GUIs for non-technical users</p>
+            </div>
+          </li>
+          <li>
+            <span class="competency-icon"><i class="fas fa-cloud"></i></span>
+            <div class="competency-content">
+              <h4>Cloud & Infrastructure</h4>
+              <p>Microsoft Azure, multi-database architectures, private endpoint integration</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="about-content-column">
+        <ul class="competencies-list">
+          <li>
+            <span class="competency-icon"><i class="fas fa-bolt"></i></span>
+            <div class="competency-content">
+              <h4>Energy Markets & Domain Expertise</h4>
+              <p>ISO-NE, NYISO, CAISO, PJM, real-time load forecasting, emissions indexing</p>
+            </div>
+          </li>
+          <li>
+            <span class="competency-icon"><i class="fas fa-brain"></i></span>
+            <div class="competency-content">
+              <h4>Machine Learning & AI</h4>
+              <p>Neural networks for load forecasting, real-time CO₂ emissions prediction, anomaly detection</p>
+            </div>
+          </li>
+          <li>
+            <span class="competency-icon"><i class="fas fa-cogs"></i></span>
+            <div class="competency-content">
+              <h4>Automation & DevOps</h4>
+              <p>CI/CD pipelines, Docker containers, MLOps best practices, automated compliance systems</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    <h3 style="text-align: center; margin: 3rem 0 1.5rem;">Education</h3>
-    <div style="text-align: center;">
-      <p><strong>M.S. in Applied Data Science</strong>, University of Michigan, 2024</p>
-      <p><strong>B.A. in Economics</strong>, University of Notre Dame, 2020</p>
+    <div class="education-section">
+      <h3>Education</h3>
+      <div class="education-cards">
+        <div class="education-card">
+          <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h4>M.S. in Applied Data Science</h4>
+          <p>University of Michigan, 2024</p>
+        </div>
+        <div class="education-card">
+          <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h4>B.A. in Economics</h4>
+          <p>University of Notre Dame, 2020</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
