@@ -2,7 +2,7 @@
 layout: default
 title: "NYISO Load Forecasting: ANN-Based Hourly Predictions"
 date: 2024-08-19 10:00:00 -0400
-image: "/images/posts/nyiso-forecast.jpg"
+image: "/_images/posts/nyiso-forecast.jpg"
 categories: [forecasting, NYISO, energy]
 excerpt: "Implemented neural network model for NYISO load forecasting, achieving 2.3% MAPE and outperforming traditional ARIMA by 0.8%."
 ---

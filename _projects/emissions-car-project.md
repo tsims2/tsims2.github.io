@@ -3,7 +3,7 @@ layout: default
 title: "Real-Time CO₂ Emissions Index for EV Charging"
 date: 2023-09-26
 icon: leaf
-image: "/images/projects/emissions-index.jpg"
+image: "/_images/projects/emissions-index.jpg"
 tags: ["emissions", "sustainability", "real-time", "ISO-NE"]
 description: "Created a real-time CO₂ emissions tracking index that optimizes EV charging schedules by identifying periods of lowest grid carbon intensity."
 ---

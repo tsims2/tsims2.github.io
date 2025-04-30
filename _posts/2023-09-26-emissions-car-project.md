@@ -2,7 +2,7 @@
 layout: default
 title: "Emissions Car Project: Real-Time CO₂ Emissions Index"
 date: 2023-09-26 11:00:00 -0400
-image: "/images/posts/emissions-index.jpg"
+image: "/_images/posts/emissions-index.jpg"
 categories: [emissions, environment, data]
 excerpt: "Built a real-time CO₂ emissions index for optimal EV charging, achieving 12% emissions reduction in pilot trials."
 ---
