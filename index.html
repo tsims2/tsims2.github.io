@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tyler Sims | Data Scientist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="Portfolio of Tyler Sims: forecasting, dashboards, workflow automation, and decision-support systems."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/tyler-logo/tyler-joe-sims-logo.png" type="image/png" />
+</head>
+<body>
+<header class="site-header" id="top">
+    <div class="container header-inner">
+        <a class="site-name" href="#top" aria-label="Tyler Sims home">
+            <img
+                src="assets/tyler-logo/tyler-joe-sims-logo.png"
+                alt="Tyler Sims logo"
+                class="site-logo"
+            />
+            <span class="site-name-text">Tyler Sims</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Resume</a>
+            <a href="https://github.com/tsims2" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/tsims2/" class="nav-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="overview">
+        <div class="container hero-layout">
+            <div class="hero-mark" aria-hidden="true">
+                <div class="hero-logo-card">
+                    <img
+                        src="assets/tyler-logo/tyler-joe-sims-logo.png"
+                        alt="Tyler Sims logo"
+                        class="hero-logo"
+                    />
+                </div>
+            </div>
+
+            <div class="hero-copy">
+                <p class="eyebrow">Data Science Portfolio</p>
+                <h1><span class="hero-name">Tyler Sims</span><span class="hero-credential">M.S.</span></h1>
+                <p class="hero-title">Data Scientist focused on forecasting, dashboards, workflow automation, and decision support</p>
+                <p class="hero-summary">
+                    I develop data science and analytics solutions that improve visibility, streamline workflows, and support better decisions. My experience spans forecasting, dashboard development, Python automation, database design, and building scalable tools for real operational use.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-secondary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">Resume</a>
+                    <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2>Practical data science for operational decision-making</h2>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-copy">
+                    <p>
+                        I am a data scientist who builds practical systems that turn operational data into forecasts, dashboards, automations, and decision-support tools. My work sits at the intersection of modeling, analytics engineering, and process improvement, with hands-on experience building solutions for real users in energy and operations environments.
+                    </p>
+                    <p>
+                        I focus on making data work in practice, not just in notebooks. That includes designing scalable workflows, structuring high-volume data, automating recurring analysis, and building tools that improve visibility and reduce manual effort across teams.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="projects">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">Featured Projects</p>
+                <h2>Selected work</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" id="project-forecasting">
+                    <div class="project-media">
+                        <img src="assets/dispatch-reports/power-bi-report-clean-peak-sytem-load-peak-tracker.png" alt="Forecasting dashboard view for load analysis" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Forecasting</p>
+                        <h3>Energy Load Forecasting for New York Operations</h3>
+                        <p class="project-summary">
+                            Built machine learning forecasting workflows to predict energy load behavior using historical consumption patterns, weather inputs, calendar effects, and operational features.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-forecasting-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-forecasting-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>Load behavior is volatile and influenced by weather, seasonality, and operational conditions, making it difficult to plan effectively using manual or static methods.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Developed forecasting workflows in Python that integrated historical load data with external drivers and model evaluation pipelines, including neural-network-based forecasting and comparative modeling strategies.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Created a structured forecasting foundation for planning and scenario evaluation, with applications to grid management, renewable integration, and energy trading support.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> Python, time series forecasting, machine learning, feature engineering, model evaluation, weather data integration</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-forecasting">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-automation">
+                    <div class="project-media">
+                        <img src="assets/dispatch-reports/power-bi-report-dispatch-dashboard.png" alt="Dashboard for ISO-NE operational workflows" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Automation</p>
+                        <h3>Workflow Automation and Reporting for ISO-NE Operations</h3>
+                        <p class="project-summary">
+                            Built an automation portfolio for ISO-NE-related operational processes, including databases, Python modules, dashboards, reporting tools, and user-facing systems that replaced inefficient legacy workflows.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-automation-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-automation-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>Analysts were burdened by repetitive manual workflows, fragmented reporting, and tools that did not scale with program growth.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Designed reusable automation modules and reporting workflows that standardized recurring operational processes, improved reporting consistency, and created user-friendly tools adopted across teams.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Replaced inefficient legacy processes, increased operational visibility, and supported broader adoption across analysts, sales, and engineering teams.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> Python, SQL, reporting automation, dashboard development, workflow design, internal tooling</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-automation">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-infrastructure">
+                    <div class="project-media">
+                        <img src="assets/settlements-reports/power-bi-report-settlement-supporting-data.png" alt="Operational dataset and reporting view" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Infrastructure</p>
+                        <h3>Scalable Data Infrastructure for Multi-Region Operations</h3>
+                        <p class="project-summary">
+                            Designed database and data-processing workflows to support multiple operational datasets at production scale, including systems receiving roughly 2 to 3 million new rows per month.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-infrastructure-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-infrastructure-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>High-volume operational data and multi-region workflows required infrastructure that could scale while remaining reliable and easy to maintain.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Built a structured database approach and supporting workflows designed for scale, separation of concerns, automation readiness, and operational resilience.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Supported sustained monthly data growth, enabled scalable analytics and reporting workflows, and created a stronger infrastructure foundation for downstream automation and decision-support tools.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> SQL, database design, Python, ETL workflows, data architecture</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-infrastructure">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-reporting">
+                    <div class="project-media">
+                        <img src="assets/performance-reports/pdf-report-isone-summary.png" alt="Automated report output for operational analysis" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Reporting</p>
+                        <h3>Automated Report Generation and Decision Support Across ISOs</h3>
+                        <p class="project-summary">
+                            Built report-generation workflows that integrated cross-ISO enrollment, settlement, and interval data into consistent outputs for business users.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-reporting-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-reporting-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>Business reporting across multiple markets was fragmented, repetitive, and difficult to standardize using ISO-specific logic.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Refactored reporting workflows around reusable APIs and report components so users could generate consistent outputs using common identifiers and shared logic across ISOs.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Improved consistency, reduced manual reporting effort, and created a more scalable path for multi-market reporting and decision support.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> Python, API integration, report generation, reusable classes and modules, operational analytics</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-reporting">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-frontend">
+                    <div class="project-media">
+                        <img src="assets/dispatch-reports/power-bi-report-dispatch-dashboard.png" alt="Internal tool interface for workflow automation" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Front-End Development</p>
+                        <h3>Internal Tools for Workflow and Data Access</h3>
+                        <p class="project-summary">
+                            Built internal-facing interfaces that simplified recurring workflows, improved access to operational data, and reduced friction for day-to-day users.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-frontend-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-frontend-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>Teams relied on fragmented manual steps and inconsistent access points to complete routine operational tasks and retrieve the data they needed.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Designed internal tools and lightweight front-end interfaces that brought key workflow steps and data access into more usable, centralized experiences.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Reduced spreadsheet friction, made recurring work faster to complete, and improved usability for internal stakeholders working with operational data.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> Internal tooling, front-end development, workflow design, data access interfaces, dashboard UX</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-frontend">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" id="project-labeling">
+                    <div class="project-media">
+                        <img src="assets/settlements-reports/power-bi-report-settlement-supporting-data.png" alt="Analytical dataset view for clustering and feature engineering" />
+                    </div>
+                    <div class="project-body">
+                        <p class="project-kicker">Labeling</p>
+                        <h3>Clustering-Based Labels for Forecasting and Risk Analysis</h3>
+                        <p class="project-summary">
+                            Applied unsupervised clustering to create stronger label structures and engineered features that improved downstream forecasting and risk-oriented analysis.
+                        </p>
+                        <div class="project-toggle-row">
+                            <button
+                                class="project-toggle"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-controls="project-modal"
+                                data-project-target="project-labeling-details"
+                            >
+                                See All
+                            </button>
+                        </div>
+                        <div class="project-expanded" id="project-labeling-details" hidden>
+                            <dl class="project-details">
+                                <div>
+                                    <dt>Problem</dt>
+                                    <dd>Forecasting and risk workflows needed more informative structure in the underlying data than basic labels and raw variables could provide.</dd>
+                                </div>
+                                <div>
+                                    <dt>Solution</dt>
+                                    <dd>Used unsupervised clustering methods to identify latent patterns in the data and turn those patterns into more useful features for modeling workflows.</dd>
+                                </div>
+                                <div>
+                                    <dt>Impact</dt>
+                                    <dd>Created a richer feature layer for downstream models and gave forecasting and risk analysis a more informative representation of operational behavior.</dd>
+                                </div>
+                            </dl>
+                            <p class="project-tools"><span>Tools</span> Python, unsupervised learning, clustering, feature engineering, forecasting, risk analysis</p>
+                            <div class="project-actions">
+                                <a class="btn btn-secondary" href="#project-labeling">Case Study</a>
+                                <span class="btn btn-disabled" aria-disabled="true">Private Code / Case Study Only</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="experience">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">Experience Snapshot</p>
+                <h2>Recent experiences</h2>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <h3>CPower Energy</h3>
+                    <p class="experience-role">Data Scientist / Operations Analytics</p>
+                    <p>
+                        Built forecasting workflows, automation systems, dashboards, and data tools supporting operational and market-facing processes. Developed scalable databases, reporting systems, and user-facing analytics adopted across teams.
+                    </p>
+                </article>
+
+                <article class="experience-card">
+                    <h3>Upwork</h3>
+                    <p class="experience-role">Freelance Data Analyst / Dashboard Developer</p>
+                    <p>
+                        Created interactive Excel dashboards for a loan analysis client to improve reporting, visibility into deal metrics, and decision-making. Designed user-friendly tools that organized financial and lending data, reduced manual spreadsheet work, and made ongoing analysis more efficient.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container section-stack contact-section">
+            <div class="contact-copy">
+                <div class="section-heading">
+                    <p class="eyebrow">Resume, GitHub, and Contact</p>
+                    <h2>Open to data science roles focused on applied impact</h2>
+                    <p class="section-lead">
+                        I’m looking for data science roles where I can contribute across forecasting, analytics automation, dashboards, and decision-support systems. For more detail, view my resume or explore project code and case studies on GitHub.
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-actions">
+                <a class="btn btn-primary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View Resume</a>
+                <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="btn btn-secondary" href="mailto:Tyler.Sims@cpower.com">Email</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="project-modal" id="project-modal" hidden>
+    <div class="project-modal-backdrop" data-project-close></div>
+    <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+        <button class="project-modal-close" type="button" aria-label="Close project details" data-project-close>
+            Close
+        </button>
+        <div class="project-modal-content"></div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>Tyler Sims © 2026</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
