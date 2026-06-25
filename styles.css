@@ -208,6 +208,15 @@ main section[id] {
     background: transparent;
 }
 
+.section-card {
+    padding: 34px 40px;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 255, 0.9));
+    border: var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow);
+}
+
 .hero {
     padding-top: 88px;
 }
@@ -392,6 +401,69 @@ main section[id] {
     margin: 0;
 }
 
+.hero-compare-panel {
+    overflow: hidden;
+    background: var(--surface);
+    border: var(--card-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow);
+}
+
+.hero-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+}
+
+.hero-compare-shot {
+    min-width: 0;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.86);
+}
+
+.hero-compare-shot + .hero-compare-shot {
+    border-left: 1px solid rgba(91, 92, 128, 0.12);
+}
+
+.hero-compare-shot p {
+    margin: 0 0 10px;
+    color: var(--accent);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-compare-shot img {
+    width: 100%;
+    height: clamp(220px, 34vw, 360px);
+    object-fit: cover;
+    object-position: left top;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(91, 92, 128, 0.12);
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-compare-shot-dark {
+    background: #151724;
+}
+
+.hero-compare-shot-dark p {
+    color: #9fa8ff;
+}
+
+.hero-compare-shot-dark img {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.hero-compare-panel figcaption {
+    padding: 16px 18px 18px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    border-top: 1px solid rgba(91, 92, 128, 0.12);
+}
+
 .tech-chip-list {
     margin: 0;
     padding: 0;
@@ -530,43 +602,74 @@ main section[id] {
     gap: 14px;
 }
 
-.architecture-diagram {
-    padding: 26px;
+.architecture-map {
+    padding: 28px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
     align-items: stretch;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 247, 255, 0.88));
 }
 
-.diagram-node,
-.diagram-arrow {
-    min-height: 74px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    border-radius: var(--radius-md);
+.architecture-tier {
+    position: relative;
+    display: grid;
+    gap: 8px;
+    padding: 20px 22px;
+    border-radius: var(--radius-lg);
     border: 1px solid rgba(91, 92, 128, 0.14);
     background: rgba(255, 255, 255, 0.86);
-    color: var(--text);
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.35;
+    box-shadow: var(--shadow-soft);
 }
 
-.diagram-arrow {
+.architecture-tier p {
+    margin: 0;
     color: var(--accent);
-    background: rgba(98, 101, 255, 0.08);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
-.diagram-split {
-    grid-column: 1 / -1;
-    height: 1px;
-    background: rgba(91, 92, 128, 0.16);
+.architecture-tier h3 {
+    margin: 0;
+    letter-spacing: -0.02em;
 }
 
-.diagram-node-wide {
-    grid-column: span 3;
+.architecture-tier span {
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.architecture-connector {
+    justify-self: center;
+    min-width: 160px;
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+    background: rgba(98, 101, 255, 0.1);
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.architecture-tier-ui {
+    border-color: rgba(54, 61, 255, 0.18);
+}
+
+.architecture-tier-api {
+    border-color: rgba(98, 101, 255, 0.2);
+}
+
+.architecture-tier-domain {
+    border-color: rgba(116, 200, 133, 0.28);
+}
+
+.architecture-tier-external {
+    border-color: rgba(91, 92, 128, 0.2);
 }
 
 .screenshot-panel {
@@ -1043,10 +1146,6 @@ main section[id] {
         grid-template-columns: 1fr;
     }
 
-    .diagram-node-wide {
-        grid-column: auto;
-    }
-
     .impact-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1104,6 +1203,23 @@ main section[id] {
     .hero-logo {
         width: min(280px, 82%);
         max-height: 240px;
+    }
+
+    .section-card {
+        padding: 24px;
+    }
+
+    .hero-compare-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-compare-shot + .hero-compare-shot {
+        border-left: 0;
+        border-top: 1px solid rgba(91, 92, 128, 0.12);
+    }
+
+    .hero-compare-shot img {
+        height: 260px;
     }
 
     .summary-card-grid,

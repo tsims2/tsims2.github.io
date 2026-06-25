@@ -80,21 +80,34 @@
                 </div>
             </div>
 
-            <figure class="hero-visual screenshot-panel">
-                <img
-                    src="assets/ESPApp/esp-app-03-performance-workflow-sanitized.png"
-                    alt="Sanitized ESP.App performance workflow screen with event review, site-level results, validation status, and action controls."
-                    loading="eager"
-                />
+            <figure class="hero-visual hero-compare-panel">
+                <div class="hero-compare-grid">
+                    <div class="hero-compare-shot">
+                        <p>Workflow settings</p>
+                        <img
+                            src="assets/ESPApp/Setting Controls.png"
+                            alt="Sanitized ESP.App settings controls screen in light mode."
+                            loading="eager"
+                        />
+                    </div>
+                    <div class="hero-compare-shot hero-compare-shot-dark">
+                        <p>Dark mode view</p>
+                        <img
+                            src="assets/ESPApp/Setting Controls Dark Mode.png"
+                            alt="Sanitized ESP.App settings controls screen in dark mode."
+                            loading="eager"
+                        />
+                    </div>
+                </div>
                 <figcaption>
-                    Operational workflow surface for reviewing events, site-level results, validation status, and downstream actions.
+                    Side-by-side settings controls showing the light and dark mode interface treatment.
                 </figcaption>
             </figure>
         </div>
     </section>
 
     <section class="section section-alt" id="case-study">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Overview</p>
                 <h2>ESP.App: Internal Operations Control Plane</h2>
@@ -125,7 +138,7 @@
     </section>
 
     <section class="section" id="problem">
-        <div class="container case-two-column">
+        <div class="container case-two-column section-card">
             <div class="section-heading">
                 <p class="eyebrow">The problem</p>
                 <h2>Critical workflows lived outside a product surface</h2>
@@ -146,7 +159,7 @@
     </section>
 
     <section class="section section-alt" id="architecture">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">What I built</p>
                 <h2>A control plane over reusable domain logic</h2>
@@ -172,23 +185,44 @@
                 </article>
             </div>
 
-            <div class="architecture-diagram" aria-label="Public-safe ESP.App architecture diagram">
-                <div class="diagram-node">React + TypeScript frontend</div>
-                <div class="diagram-arrow" aria-hidden="true">API</div>
-                <div class="diagram-node">FastAPI backend</div>
-                <div class="diagram-split" aria-hidden="true"></div>
-                <div class="diagram-node">SQLAlchemy persistence</div>
-                <div class="diagram-node">Celery workers + Beat</div>
-                <div class="diagram-node">Redis queue</div>
-                <div class="diagram-node">PostgreSQL app database</div>
-                <div class="diagram-node diagram-node-wide">ESP.Artifacts Python domain layer</div>
-                <div class="diagram-node diagram-node-wide">External operational data systems + file destinations</div>
+            <div class="architecture-diagram architecture-map" aria-label="Public-safe ESP.App architecture diagram">
+                <div class="architecture-tier architecture-tier-ui">
+                    <p>Product surface</p>
+                    <h3>React + TypeScript frontend</h3>
+                    <span>User workflows, review screens, schedules, downloads, admin, and feedback</span>
+                </div>
+                <div class="architecture-connector" aria-hidden="true">HTTPS / JSON API</div>
+                <div class="architecture-tier architecture-tier-api">
+                    <p>Application services</p>
+                    <h3>FastAPI backend</h3>
+                    <span>Workflow endpoints, access control, orchestration entry points, and artifact requests</span>
+                </div>
+                <div class="architecture-tier">
+                    <p>Persistence</p>
+                    <h3>SQLAlchemy + PostgreSQL app database</h3>
+                    <span>Application state, users, schedules, run metadata, and workflow records</span>
+                </div>
+                <div class="architecture-tier">
+                    <p>Async execution</p>
+                    <h3>Celery workers + Celery Beat + Redis queue</h3>
+                    <span>Scheduled jobs, ordered workflow steps, background dispatch, and run tracking</span>
+                </div>
+                <div class="architecture-tier architecture-tier-domain">
+                    <p>Reusable domain logic</p>
+                    <h3>ESP.Artifacts Python domain layer</h3>
+                    <span>Database clients, calculations, data quality checks, reports, statements, and generated files</span>
+                </div>
+                <div class="architecture-tier architecture-tier-external">
+                    <p>Operational inputs and outputs</p>
+                    <h3>External operational systems + file destinations</h3>
+                    <span>Public-safe representation of source systems, downstream exports, and business-facing artifacts</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section" id="workflows">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Product workflow</p>
                 <h2>From operational data to repeatable workflow</h2>
@@ -219,7 +253,7 @@
     </section>
 
     <section class="section section-alt" id="execution">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Execution and observability</p>
                 <h2>Scheduled execution with run visibility</h2>
@@ -264,7 +298,7 @@
     </section>
 
     <section class="section" id="artifact-generation">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Artifact generation</p>
                 <h2>Generating business-facing outputs from operational workflows</h2>
@@ -299,7 +333,7 @@
     </section>
 
     <section class="section section-alt" id="documentation">
-        <div class="container case-two-column case-two-column-media">
+        <div class="container case-two-column case-two-column-media section-card">
             <div class="section-heading">
                 <p class="eyebrow">Documentation</p>
                 <h2>Documentation inside the workflow</h2>
@@ -321,7 +355,7 @@
     </section>
 
     <section class="section" id="admin">
-        <div class="container case-two-column case-two-column-media">
+        <div class="container case-two-column case-two-column-media section-card">
             <div class="section-heading">
                 <p class="eyebrow">Admin and feedback</p>
                 <h2>Admin tooling for a real internal product</h2>
@@ -351,7 +385,7 @@
     </section>
 
     <section class="section section-alt" id="role">
-        <div class="container case-two-column">
+        <div class="container case-two-column section-card">
             <div class="section-heading">
                 <p class="eyebrow">My role</p>
                 <h2>End-to-end ownership across product and implementation</h2>
@@ -375,7 +409,7 @@
     </section>
 
     <section class="section" id="impact">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Impact</p>
                 <h2>Purpose-built software for recurring operations</h2>
@@ -399,7 +433,7 @@
     </section>
 
     <section class="section section-alt" id="other-work">
-        <div class="container section-stack">
+        <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Other relevant work</p>
                 <h2>Additional operational data work</h2>
@@ -411,7 +445,7 @@
     </section>
 
     <section class="section" id="contact">
-        <div class="container section-stack contact-section">
+        <div class="container section-stack contact-section section-card">
             <div class="contact-copy">
                 <div class="section-heading">
                     <p class="eyebrow">Resume, links, and contact</p>
