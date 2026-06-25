@@ -1,6 +1,6 @@
 # Tyler Sims Portfolio
 
-Single-page portfolio site for Tyler Sims, focused on forecasting, dashboards, workflow automation, reporting systems, and decision-support tooling.
+Single-page portfolio site for Tyler Sims, focused on forward-deployed software engineering, enterprise data workflows, Python automation, internal data products, and decision-support tooling.
 
 ## Local use
 

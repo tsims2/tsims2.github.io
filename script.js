@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderConstellationBackground();
-    initProjectModal();
+    initUpworkModal();
 
     const siteHeader = document.querySelector(".site-header");
     const heroSection = document.querySelector("#overview");
@@ -50,61 +50,27 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => sectionObserver.observe(section));
 });
 
-function initProjectModal() {
-    const modal = document.getElementById("project-modal");
-    const modalContent = modal?.querySelector(".project-modal-content");
-    const toggles = document.querySelectorAll(".project-toggle");
-    const closeButtons = modal?.querySelectorAll("[data-project-close]");
+function syncModalBodyState() {
+    const hasOpenModal = Boolean(document.querySelector(".project-modal:not([hidden])"));
+    document.body.classList.toggle("modal-open", hasOpenModal);
+}
 
-    if (!modal || !modalContent || !toggles.length) return;
+function initUpworkModal() {
+    const modal = document.getElementById("upwork-modal");
+    const openButtons = document.querySelectorAll("[data-upwork-open]");
+    const closeButtons = modal?.querySelectorAll("[data-upwork-close]");
+
+    if (!modal || !openButtons.length) return;
 
     const closeModal = () => {
         modal.hidden = true;
-        modalContent.replaceChildren();
-        document.body.classList.remove("modal-open");
+        syncModalBodyState();
     };
 
-    toggles.forEach((toggle) => {
-        toggle.addEventListener("click", () => {
-            const card = toggle.closest(".project-card");
-            const targetId = toggle.dataset.projectTarget;
-            const details = targetId ? document.getElementById(targetId) : null;
-
-            if (!card || !details) return;
-
-            const media = card.querySelector(".project-media")?.cloneNode(true);
-            const kicker = card.querySelector(".project-kicker")?.cloneNode(true);
-            const title = card.querySelector("h3")?.cloneNode(true);
-            const summary = card.querySelector(".project-summary")?.cloneNode(true);
-            const detailBlock = details.querySelector(".project-details")?.cloneNode(true);
-            const tools = details.querySelector(".project-tools")?.cloneNode(true);
-            const actions = details.querySelector(".project-actions")?.cloneNode(true);
-
-            if (title) {
-                title.id = "project-modal-title";
-                title.classList.add("project-modal-title");
-            }
-
-            if (actions) {
-                const deadAnchor = actions.querySelector('a[href^="#project-"]');
-                if (deadAnchor) {
-                    deadAnchor.remove();
-                }
-            }
-
-            const header = document.createElement("div");
-            header.className = "project-modal-header";
-
-            if (kicker) header.append(kicker);
-            if (title) header.append(title);
-            if (summary) header.append(summary);
-
-            modalContent.replaceChildren(
-                ...[media, header, detailBlock, tools, actions].filter(Boolean)
-            );
-
+    openButtons.forEach((button) => {
+        button.addEventListener("click", () => {
             modal.hidden = false;
-            document.body.classList.add("modal-open");
+            syncModalBodyState();
         });
     });
 
