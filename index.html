@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Tyler Sims | Forward Deployed Software Engineer</title>
+    <title>Tyler Sims | ESP.App Case Study</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
         name="description"
-        content="Tyler Sims builds production data workflows, automation systems, and operational data products that help teams turn enterprise data into measurable outcomes."
+        content="A case study on ESP.App, an internal operations control plane for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics."
     />
-    <meta property="og:title" content="Tyler Sims | Forward Deployed Software Engineer" />
+    <meta property="og:title" content="Tyler Sims | ESP.App Case Study" />
     <meta
         property="og:description"
-        content="Production data workflows, Python automation, internal applications, and stakeholder-facing deliverables for operational teams."
+        content="ESP.App case study: an internal operations control plane for energy-program workflows, scheduled execution, artifact generation, and operational analytics."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tsims2.github.io/" />
-    <meta property="og:image" content="https://tsims2.github.io/assets/tyler-logo/tyler-joe-sims-logo.png" />
+    <meta property="og:image" content="https://tsims2.github.io/assets/ESPApp/esp-app-03-performance-workflow-sanitized.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tyler Sims | Forward Deployed Software Engineer" />
+    <meta name="twitter:title" content="Tyler Sims | ESP.App Case Study" />
     <meta
         name="twitter:description"
-        content="Operational data systems for real-world teams: enterprise data workflows, Python automation, internal data apps, and trusted deliverables."
+        content="ESP.App case study: internal operations software for workflow automation, run tracking, reporting, and artifact generation."
     />
     <link rel="canonical" href="https://tsims2.github.io/" />
     <link rel="stylesheet" href="styles.css" />
@@ -38,9 +38,10 @@
             <span class="site-name-text">Tyler Sims</span>
         </a>
         <nav class="nav" aria-label="Primary">
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#system" class="nav-link">System</a>
-            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#case-study" class="nav-link">Case Study</a>
+            <a href="#architecture" class="nav-link">Architecture</a>
+            <a href="#workflows" class="nav-link">Workflows</a>
+            <a href="#impact" class="nav-link">Impact</a>
             <a href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" class="nav-link" target="_blank" rel="noopener">Resume</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -48,470 +49,362 @@
 </header>
 
 <main>
-    <section class="hero" id="overview">
-        <div class="container hero-layout">
-            <div class="hero-mark" aria-hidden="true">
-                <div class="hero-logo-card">
-                    <img
-                        src="assets/tyler-logo/tyler-joe-sims-logo.png"
-                        alt="Tyler Sims logo"
-                        class="hero-logo"
-                    />
-                </div>
-            </div>
-
-            <div class="hero-copy">
-                <p class="eyebrow">Forward-Deployed Data Scientist &amp; Analytics Engineer</p>
-                <h1>Tyler Sims, M.S.</h1>
+    <section class="hero esp-hero" id="overview">
+        <div class="container hero-layout esp-hero-layout">
+            <div class="hero-copy esp-hero-copy">
+                <p class="eyebrow">Tyler Sims</p>
+                <h1>ESP.App</h1>
                 <p class="hero-title">
                     Forward-Deployed Data Scientist &amp; Analytics Engineer
                 </p>
                 <p class="hero-summary">
-                    I build forecasting workflows, automation systems, dashboards, and internal data tools for teams that need reliable decisions from messy operational data. My work combines Python, SQL, data modeling, workflow automation, and stakeholder-facing implementation across energy and operations environments.
+                    I build production data applications and workflow automation systems for operational teams. ESP.App is an internal operations control plane I built to manage energy-program workflows across enrollments, events, performance calculations, settlements, reporting, scheduling, run tracking, and artifact generation.
                 </p>
+                <ul class="tech-chip-list hero-tech-list" aria-label="Technology stack">
+                    <li>Python</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>FastAPI</li>
+                    <li>SQLAlchemy</li>
+                    <li>Celery</li>
+                    <li>Redis</li>
+                    <li>PostgreSQL</li>
+                    <li>Azure SQL</li>
+                    <li>Power BI</li>
+                </ul>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#projects">View Case Studies</a>
+                    <a class="btn btn-primary" href="#case-study">View ESP.App Case Study</a>
                     <a class="btn btn-secondary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View Resume</a>
-                    <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                     <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
+
+            <figure class="hero-visual screenshot-panel">
+                <img
+                    src="assets/ESPApp/esp-app-03-performance-workflow-sanitized.png"
+                    alt="Sanitized ESP.App performance workflow screen with event review, site-level results, validation status, and action controls."
+                    loading="eager"
+                />
+                <figcaption>
+                    Operational workflow surface for reviewing events, site-level results, validation status, and downstream actions.
+                </figcaption>
+            </figure>
         </div>
     </section>
 
-    <section class="section section-alt" id="projects">
+    <section class="section section-alt" id="case-study">
         <div class="container section-stack">
             <div class="section-heading">
-                <p class="eyebrow">Featured Projects</p>
-                <h2>Operational systems built from data to adoption</h2>
+                <p class="eyebrow">Overview</p>
+                <h2>ESP.App: Internal Operations Control Plane</h2>
                 <p class="section-lead">
-                    These examples are summarized in public-safe terms because the underlying systems were internal. They map to forward-deployed software work: make enterprise data useful, operationalize workflows, and deliver tools that end users actually use.
+                    ESP.App is a browser-based internal platform for turning manual energy operations workflows into repeatable application workflows. It provides user-facing screens for reviewing operational data, running calculations, generating reports, managing schedules, tracking workflow execution, and administering access.
                 </p>
             </div>
 
-            <div class="project-category">
-                <div class="project-category-heading">
-                    <p class="eyebrow">Data Management</p>
-                    <h3>Structured, trusted data foundations</h3>
-                    <p>
-                        Work focused on turning operational source data into reusable layers for analysis, forecasting, reporting, and application workflows.
-                    </p>
-                </div>
-
-                <div class="project-grid">
-                    <article class="project-card" id="project-modeling">
-                        <div class="project-body">
-                            <p class="project-kicker">Data Management</p>
-                            <h3>Operational Modeling and Data Foundation</h3>
-                            <p class="project-summary">
-                                A reusable analytical foundation for load behavior, baseline interpretation, and forecasting-related operational analysis built from historical time-series data and business context.
-                            </p>
-                            <ul class="project-tag-row" role="list">
-                                <li class="project-tag">Structured datasets</li>
-                                <li class="project-tag">Feature engineering</li>
-                                <li class="project-tag">Model-ready data</li>
-                            </ul>
-                            <dl class="project-details">
-                                <div>
-                                    <dt>Problem</dt>
-                                    <dd>Operational planning needed dependable data structures for interpreting changing load behavior instead of relying on static summaries and one-off analysis files.</dd>
-                                </div>
-                                <div>
-                                    <dt>Build</dt>
-                                    <dd>Built reusable data preparation and modeling workflows that combined historical load patterns with weather, calendar, and program context for forecasting and scenario-oriented analysis.</dd>
-                                </div>
-                                <div>
-                                    <dt>Value</dt>
-                                    <dd>Created a clearer data layer for evaluating operational behavior, comparing scenarios, and supporting forecasting-adjacent decisions with stronger analytical grounding.</dd>
-                                </div>
-                            </dl>
-                            <div class="project-skill-block">
-                                <p class="project-tools"><span>Skills shown</span></p>
-                                <ul class="skill-chip-list project-skill-list" role="list">
-                                    <li>Python</li>
-                                    <li>Data modeling</li>
-                                    <li>Feature engineering</li>
-                                    <li>Model evaluation</li>
-                                    <li>Scenario analysis</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card" id="project-validation">
-                        <div class="project-body">
-                            <p class="project-kicker">Data Management</p>
-                            <h3>Automated Data Quality and Validation Engine</h3>
-                            <p class="project-summary">
-                                A validation workflow that checks operational data before it reaches downstream reports, models, or user-facing tools.
-                            </p>
-                            <ul class="project-tag-row" role="list">
-                                <li class="project-tag">Automated QA</li>
-                                <li class="project-tag">Data trust</li>
-                                <li class="project-tag">Pipeline safeguards</li>
-                            </ul>
-                            <dl class="project-details">
-                                <div>
-                                    <dt>Problem</dt>
-                                    <dd>Silent data issues can distort reporting, break workflows, and erode trust when operational teams rely on fast-moving datasets.</dd>
-                                </div>
-                                <div>
-                                    <dt>Build</dt>
-                                    <dd>Added automated validation steps for missing data, coverage issues, and structural checks, then tied those checks into scheduled and downstream workflows.</dd>
-                                </div>
-                                <div>
-                                    <dt>Value</dt>
-                                    <dd>Improved trust in operational pipelines by catching problems earlier and reducing the chance that broken data would reach reports, models, or internal users unnoticed.</dd>
-                                </div>
-                            </dl>
-                            <div class="project-skill-block">
-                                <p class="project-tools"><span>Skills shown</span></p>
-                                <ul class="skill-chip-list project-skill-list" role="list">
-                                    <li>Validation logic</li>
-                                    <li>Coverage checks</li>
-                                    <li>Missing-data QA</li>
-                                    <li>Automation hooks</li>
-                                    <li>Pipeline reliability</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <div class="project-category">
-                <div class="project-category-heading">
-                    <p class="eyebrow">Process Automation</p>
-                    <h3>Repeatable workflows over manual coordination</h3>
-                    <p>
-                        Work focused on translating business rules, timing constraints, and recurring operational tasks into reusable execution paths.
-                    </p>
-                </div>
-
-                <div class="project-grid">
-                    <article class="project-card" id="project-automation">
-                        <div class="project-body">
-                            <p class="project-kicker">Process Automation</p>
-                            <h3>Modular Python Automation Stack</h3>
-                            <p class="project-summary">
-                                A reusable Python foundation for repeated operational workflows spanning ingestion, transformation, calculations, report support, and downstream automation.
-                            </p>
-                            <ul class="project-tag-row" role="list">
-                                <li class="project-tag">Reusable modules</li>
-                                <li class="project-tag">ETL workflows</li>
-                                <li class="project-tag">Maintainable logic</li>
-                            </ul>
-                            <dl class="project-details">
-                                <div>
-                                    <dt>Problem</dt>
-                                    <dd>Repeated operational work was too dependent on fragile manual steps, duplicated logic, and tools that were difficult to extend.</dd>
-                                </div>
-                                <div>
-                                    <dt>Build</dt>
-                                    <dd>Designed reusable Python modules and shared workflow components for data access, transformation, calculations, reporting support, and automation-ready execution paths.</dd>
-                                </div>
-                                <div>
-                                    <dt>Value</dt>
-                                    <dd>Turned recurring operational work into a more maintainable internal platform, making it easier to standardize outputs, scale workflows, and add new automation over time.</dd>
-                                </div>
-                            </dl>
-                            <div class="project-skill-block">
-                                <p class="project-tools"><span>Skills shown</span></p>
-                                <ul class="skill-chip-list project-skill-list" role="list">
-                                    <li>Python</li>
-                                    <li>Modular code design</li>
-                                    <li>ETL</li>
-                                    <li>Reporting support</li>
-                                    <li>Workflow automation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card" id="project-scheduling">
-                        <div class="project-body">
-                            <p class="project-kicker">Process Automation</p>
-                            <h3>Schedule-Building Workflow Integration</h3>
-                            <p class="project-summary">
-                                A scheduling workflow layer that connected repeatable business rules, Python execution targets, and operational timing into a more structured build process.
-                            </p>
-                            <ul class="project-tag-row" role="list">
-                                <li class="project-tag">Schedule generation</li>
-                                <li class="project-tag">Ordered workflow steps</li>
-                                <li class="project-tag">Operational planning</li>
-                            </ul>
-                            <dl class="project-details">
-                                <div>
-                                    <dt>Problem</dt>
-                                    <dd>Schedule-related operational work needed to happen in the right order, against the right data cutoffs, without depending on inconsistent manual orchestration.</dd>
-                                </div>
-                                <div>
-                                    <dt>Build</dt>
-                                    <dd>Integrated schedule-driven logic with reusable Python components and timer-based or on-demand workflow patterns so operational steps could be executed more consistently.</dd>
-                                </div>
-                                <div>
-                                    <dt>Value</dt>
-                                    <dd>Made schedule generation and schedule-based execution more repeatable, easier to reason about, and better aligned with real operating deadlines.</dd>
-                                </div>
-                            </dl>
-                            <div class="project-skill-block">
-                                <p class="project-tools"><span>Skills shown</span></p>
-                                <ul class="skill-chip-list project-skill-list" role="list">
-                                    <li>Business-rule translation</li>
-                                    <li>Scheduling workflows</li>
-                                    <li>Reusable Python targets</li>
-                                    <li>Automation patterns</li>
-                                    <li>Operational planning</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <div class="project-category">
-                <div class="project-category-heading">
-                    <p class="eyebrow">Data Deliverables</p>
-                    <h3>Operational outputs people can actually use</h3>
-                    <p>
-                        Work focused on putting reliable data products in front of analysts, operators, and business stakeholders through dashboards, internal apps, and decision-support surfaces.
-                    </p>
-                </div>
-
-                <div class="project-grid project-grid-single">
-                    <article class="project-card" id="project-data-app">
-                        <div class="project-body">
-                            <p class="project-kicker">Data Deliverables</p>
-                            <h3>Internal Data Sharing Web App</h3>
-                            <p class="project-summary">
-                                An internal application layer that made operational data easier to browse, filter, share, and act on without relying on ad hoc file handoffs.
-                            </p>
-                            <ul class="project-tag-row" role="list">
-                                <li class="project-tag">Internal UX</li>
-                                <li class="project-tag">Data visibility</li>
-                                <li class="project-tag">User-facing analytics</li>
-                            </ul>
-                            <dl class="project-details">
-                                <div>
-                                    <dt>Problem</dt>
-                                    <dd>Operational users needed access to timely data, but too much of that access depended on fragmented reports, spreadsheets, or person-to-person file sharing.</dd>
-                                </div>
-                                <div>
-                                    <dt>Build</dt>
-                                    <dd>Created internal-facing interfaces that centralized important workflow steps and surfaced operational data in a cleaner, more usable format for day-to-day users.</dd>
-                                </div>
-                                <div>
-                                    <dt>Value</dt>
-                                    <dd>Reduced reporting friction, improved visibility into operational data, and gave non-technical users a more reliable path to the information they needed.</dd>
-                                </div>
-                            </dl>
-                            <div class="project-skill-block">
-                                <p class="project-tools"><span>Skills shown</span></p>
-                                <ul class="skill-chip-list project-skill-list" role="list">
-                                    <li>Internal web apps</li>
-                                    <li>Workflow design</li>
-                                    <li>Dashboard UX</li>
-                                    <li>Data access patterns</li>
-                                    <li>Operational analytics</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+            <div class="summary-card-grid">
+                <article class="summary-card">
+                    <p>Product</p>
+                    <h3>Internal operations control plane</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Domain</p>
+                    <h3>Energy operations and demand response</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Role</p>
+                    <h3>Product-minded data scientist / analytics engineer</h3>
+                </article>
+                <article class="summary-card">
+                    <p>Stack</p>
+                    <h3>React, TypeScript, FastAPI, Python, SQLAlchemy, Celery, Redis, PostgreSQL, Azure SQL</h3>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="section" id="system">
+    <section class="section" id="problem">
+        <div class="container case-two-column">
+            <div class="section-heading">
+                <p class="eyebrow">The Problem</p>
+                <h2>Critical workflows lived outside a product surface</h2>
+            </div>
+            <div class="case-copy">
+                <p>
+                    Energy operations workflows often depend on spreadsheets, scripts, analyst memory, file drops, and manual handoffs. That makes recurring work hard to review, hard to schedule, hard to audit, and hard to scale across programs. ESP.App was built to bring those workflows into a single internal product surface with clearer execution, review, and operational visibility.
+                </p>
+                <ul class="check-list">
+                    <li>Manual spreadsheet-driven processes</li>
+                    <li>Recurring calculations and reporting workflows</li>
+                    <li>Multiple datasets and program-specific rules</li>
+                    <li>Limited visibility into what ran, when it ran, and what was produced</li>
+                    <li>Need for reusable workflows that analysts and operators could actually use</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="architecture">
         <div class="container section-stack">
             <div class="section-heading">
-                <p class="eyebrow">How The Pieces Fit Together</p>
-                <h2>Built for implementation, not shelfware</h2>
+                <p class="eyebrow">What I Built</p>
+                <h2>A control plane over reusable domain logic</h2>
                 <p class="section-lead">
-                    The value is not just in individual components. It comes from connecting source data, reusable Python logic, workflow automation, validation checks, and user-facing deliverables into systems that teams can adopt.
+                    ESP.App separates reusable business logic from the browser-based product surface. The result is a maintainable two-layer model: a shared Python domain library and an internal web application that exposes those capabilities through workflows, review screens, schedules, logs, downloads, access controls, feedback tools, and admin interfaces.
                 </p>
             </div>
 
-            <div class="architecture-flow" aria-label="Operational data platform flow">
-                <article class="flow-stage">
-                    <p class="flow-stage-step">01</p>
-                    <h3>Enterprise Data</h3>
-                    <p>Operational feeds, time-series datasets, customer and program metadata, and other structured inputs enter through shared ingestion patterns.</p>
+            <div class="layer-grid">
+                <article class="layer-card">
+                    <p class="eyebrow">ESP.Artifacts</p>
+                    <h3>Python domain layer</h3>
+                    <p>
+                        A shared Python domain library containing reusable business logic for database access, external data clients, baseline and settlement calculations, data quality checks, payment file generation, statement generation, performance report generation, and program-specific automation packages.
+                    </p>
                 </article>
-                <article class="flow-stage">
-                    <p class="flow-stage-step">02</p>
-                    <h3>Python Automation Stack</h3>
-                    <p>Reusable code handles ingestion, transformations, calculations, report support, and shared workflow logic across repeated operational tasks.</p>
+                <article class="layer-card">
+                    <p class="eyebrow">ESP.App</p>
+                    <h3>Internal web application</h3>
+                    <p>
+                        A React/FastAPI internal web application that exposes that domain logic through user workflows, review screens, schedules, run logs, downloads, access controls, feedback tools, and admin interfaces.
+                    </p>
                 </article>
-                <article class="flow-stage flow-stage-group">
-                    <p class="flow-stage-step">03</p>
-                    <h3>Workflow Logic</h3>
-                    <p>Modeling workflows, schedule-driven execution, and automated quality checks all run against the same underlying operational data layer.</p>
-                </article>
-                <article class="flow-stage">
-                    <p class="flow-stage-step">04</p>
-                    <h3>Data Deliverables</h3>
-                    <p>Users get cleaner interfaces, reports, and decision-support surfaces without relying on fragmented file sharing.</p>
-                </article>
-                <article class="flow-stage">
-                    <p class="flow-stage-step">05</p>
-                    <h3>Customer Outcomes</h3>
-                    <p>Analysts, operators, and business stakeholders receive more consistent tools for day-to-day execution and measurable process improvement.</p>
-                </article>
+            </div>
+
+            <div class="architecture-diagram" aria-label="Public-safe ESP.App architecture diagram">
+                <div class="diagram-node">React + TypeScript frontend</div>
+                <div class="diagram-arrow" aria-hidden="true">API</div>
+                <div class="diagram-node">FastAPI backend</div>
+                <div class="diagram-split" aria-hidden="true"></div>
+                <div class="diagram-node">SQLAlchemy persistence</div>
+                <div class="diagram-node">Celery workers + Beat</div>
+                <div class="diagram-node">Redis queue</div>
+                <div class="diagram-node">PostgreSQL app database</div>
+                <div class="diagram-node diagram-node-wide">ESP.Artifacts Python domain layer</div>
+                <div class="diagram-node diagram-node-wide">External operational data systems + file destinations</div>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="skills">
+    <section class="section" id="workflows">
         <div class="container section-stack">
             <div class="section-heading">
-                <p class="eyebrow">Skills</p>
-                <h2>The capabilities behind the platform</h2>
-                <p class="section-lead skills-lead">
-                    I work best where analytics engineering, automation, internal tooling, and data trust need to become one usable operational system.
+                <p class="eyebrow">Product Workflow</p>
+                <h2>From operational data to repeatable workflow</h2>
+                <p class="section-lead">
+                    ESP.App gives users a structured surface to filter, review, validate, calculate, and export operational results. Instead of running one-off scripts or editing spreadsheets, users work through repeatable application screens connected to backend services and reusable Python modules.
                 </p>
             </div>
 
-            <div class="skills-showcase">
-                <div class="skills-overview">
-                    <p class="skills-overview-label">Operating Style</p>
-                    <p class="skills-overview-text">
-                        I build data products with an implementation mindset: understand the user objective, structure the data, automate the workflow, and ship a tool or deliverable that fits the way the team actually works.
-                    </p>
-                    <div class="skills-pill-row" aria-label="Primary themes">
-                        <span>Customer workflows</span>
-                        <span>Automation design</span>
-                        <span>Internal products</span>
-                        <span>Data quality</span>
-                        <span>Decision support</span>
-                    </div>
-                </div>
+            <figure class="screenshot-panel screenshot-panel-large">
+                <img
+                    src="assets/ESPApp/esp-app-03-performance-workflow-sanitized.png"
+                    alt="Sanitized ESP.App workflow screen for reviewing events, operational results, validation state, and actions."
+                    loading="lazy"
+                />
+                <figcaption>
+                    Operational workflow surface for reviewing events, site-level results, validation status, and downstream actions.
+                </figcaption>
+            </figure>
 
-                <div class="skills-focus">
-                    <p class="skills-focus-label">What I Optimize For</p>
-                    <ul class="skills-focus-list">
-                        <li>Systems that reduce manual effort instead of just generating another report.</li>
-                        <li>Reusable Python components that can support multiple workflows over time.</li>
-                        <li>Analytics outputs that are understandable to operational stakeholders.</li>
-                        <li>Validation steps that prevent silent pipeline failures from reaching users.</li>
-                    </ul>
-                </div>
+            <ol class="workflow-list">
+                <li>User selects operational scope.</li>
+                <li>App loads relevant events, assets, or workflow rows.</li>
+                <li>User reviews, filters, validates, or triggers an action.</li>
+                <li>Backend services call reusable artifact modules.</li>
+                <li>Outputs are written, logged, exported, or made available for downstream review.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="execution">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">Execution And Observability</p>
+                <h2>Scheduled execution with run visibility</h2>
+                <p class="section-lead">
+                    The app supports scheduled workflows, ordered workflow steps, run status tracking, logs, and execution history. This turns recurring operational work into observable workflows rather than hidden scripts.
+                </p>
             </div>
 
-            <div class="skills-grid">
-                <article class="skill-card skill-card--science">
-                    <p class="skill-card-kicker">Analytical Problem Solving</p>
-                    <h3>Breaking complex operations into usable models</h3>
-                    <p class="skill-card-summary">
-                        Load forecasting, baseline interpretation, feature engineering, scenario analysis, and model evaluation grounded in operational context.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>Time series</li>
-                        <li>Load modeling</li>
-                        <li>Feature engineering</li>
-                        <li>Scenario analysis</li>
-                    </ul>
-                </article>
+            <div class="screenshot-grid">
+                <figure class="screenshot-panel">
+                    <img
+                        src="assets/ESPApp/esp-app-04-run-history-sanitized.png"
+                        alt="Sanitized ESP.App run history screen with workflow execution rows, statuses, logs, and run details."
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        Run history view showing scheduled workflow execution, statuses, logs, and run-level traceability.
+                    </figcaption>
+                </figure>
+                <figure class="screenshot-panel">
+                    <img
+                        src="assets/ESPApp/esp-app-05-schedule-builder-sanitized.png"
+                        alt="Sanitized ESP.App schedule builder screen for defining recurring workflow execution and ordered automation steps."
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        Schedule builder for defining recurring workflow execution and ordered automation steps.
+                    </figcaption>
+                </figure>
+            </div>
 
-                <article class="skill-card skill-card--engineering">
-                    <p class="skill-card-kicker">Python Automation and Modular Code Design</p>
-                    <h3>Reusable components over one-off scripts</h3>
-                    <p class="skill-card-summary">
-                        Shared Python modules for ingestion, calculations, reporting support, scheduling workflows, and automation-ready execution.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>Python</li>
-                        <li>Modular design</li>
-                        <li>Reusable workflows</li>
-                        <li>Automation</li>
-                    </ul>
-                </article>
+            <ul class="capability-list">
+                <li>Scheduled jobs</li>
+                <li>Workflow steps</li>
+                <li>Celery dispatch</li>
+                <li>Run logs</li>
+                <li>Success/failure visibility</li>
+                <li>Operational traceability</li>
+                <li>Reduced dependence on manual triggers</li>
+            </ul>
+        </div>
+    </section>
 
-                <article class="skill-card skill-card--data">
-                    <p class="skill-card-kicker">Data Engineering and ETL</p>
-                    <h3>Reliable movement from source to output</h3>
-                    <p class="skill-card-summary">
-                        Ingestion patterns, transformation logic, structured data layers, and reporting-ready datasets for repeated operational use.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>SQL</li>
-                        <li>ETL / ELT</li>
-                        <li>Data modeling</li>
-                        <li>Reporting pipelines</li>
-                    </ul>
-                </article>
+    <section class="section" id="artifact-generation">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">Artifact Generation</p>
+                <h2>Generating business-facing outputs from operational workflows</h2>
+                <p class="section-lead">
+                    ESP.App does not stop at internal tables. It supports downstream artifact generation: reports, exports, downloadable files, and structured outputs used by operational stakeholders. It helps turn reviewed operational data into structured outputs and creates a repeatable path from data review to report generation.
+                </p>
+            </div>
 
-                <article class="skill-card skill-card--dashboards">
-                    <p class="skill-card-kicker">Internal Apps and Data Products</p>
-                    <h3>Interfaces that make enterprise data usable</h3>
-                    <p class="skill-card-summary">
-                        Internal applications and analytics surfaces that improve visibility, reduce spreadsheet friction, and support recurring operational workflows.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>Internal tools</li>
-                        <li>Data access UX</li>
-                        <li>Dashboard design</li>
-                        <li>Workflow interfaces</li>
-                    </ul>
-                </article>
-
-                <article class="skill-card skill-card--platforms">
-                    <p class="skill-card-kicker">Data Quality and Validation</p>
-                    <h3>Trust-building checks for downstream use</h3>
-                    <p class="skill-card-summary">
-                        Automated QA patterns for missing data, structural coverage, and pipeline readiness before outputs reach reports, models, or end users.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>Validation logic</li>
-                        <li>Coverage checks</li>
-                        <li>Pipeline safeguards</li>
-                        <li>QA workflows</li>
-                    </ul>
-                </article>
-
-                <article class="skill-card skill-card--wide">
-                    <p class="skill-card-kicker">Operational Analytics and Decision Support</p>
-                    <h3>Deliverables that support real workflow decisions</h3>
-                    <p class="skill-card-summary">
-                        Reporting systems, scenario views, schedule-aware automation, and decision-support outputs designed for people who need dependable operational answers.
-                    </p>
-                    <ul class="skill-chip-list" role="list">
-                        <li>Decision support</li>
-                        <li>Schedule-aware workflows</li>
-                        <li>Operational reporting</li>
-                        <li>Stakeholder usability</li>
-                    </ul>
-                </article>
+            <div class="screenshot-grid">
+                <figure class="screenshot-panel">
+                    <img
+                        src="assets/ESPApp/esp-app-07-report-builder-sanitized.png"
+                        alt="Sanitized ESP.App report builder screen for selecting operational data and configuring structured outputs."
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        Report builder workflow for turning selected operational data into structured outputs.
+                    </figcaption>
+                </figure>
+                <figure class="screenshot-panel">
+                    <img
+                        src="assets/ESPApp/esp-app-08-report-output-sanitized.png"
+                        alt="Sanitized generated report output from ESP.App showing a business-facing artifact."
+                        loading="lazy"
+                    />
+                    <figcaption>
+                        Generated report output showing how internal workflows produce business-facing artifacts.
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="experience">
+    <section class="section section-alt" id="documentation">
+        <div class="container case-two-column case-two-column-media">
+            <div class="section-heading">
+                <p class="eyebrow">Documentation</p>
+                <h2>Documentation inside the workflow</h2>
+                <p class="section-lead">
+                    ESP.App includes embedded page-level and program-level guidance so users can access instructions without leaving the operational workflow. This helps reduce dependence on tribal knowledge and makes program-specific processes easier to follow.
+                </p>
+            </div>
+            <figure class="screenshot-panel">
+                <img
+                    src="assets/ESPApp/esp-app-02-embedded-wiki-sanitized.png"
+                    alt="Sanitized ESP.App embedded wiki overlay with page-specific and program-specific workflow guidance."
+                    loading="lazy"
+                />
+                <figcaption>
+                    Embedded wiki overlay providing page-specific and program-specific workflow guidance.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="admin">
+        <div class="container case-two-column case-two-column-media">
+            <div class="section-heading">
+                <p class="eyebrow">Admin And Feedback</p>
+                <h2>Admin tooling for a real internal product</h2>
+                <p class="section-lead">
+                    The platform includes authentication, user roles, page access patterns, activity tracking, admin views, and page feedback. These features matter because internal tools still need operational ownership, usage visibility, and feedback loops.
+                </p>
+                <ul class="capability-list capability-list-compact">
+                    <li>Role-aware access</li>
+                    <li>User administration</li>
+                    <li>Activity tracking</li>
+                    <li>Page feedback</li>
+                    <li>Workflow usage visibility</li>
+                    <li>Internal product operations</li>
+                </ul>
+            </div>
+            <figure class="screenshot-panel">
+                <img
+                    src="assets/ESPApp/esp-app-09-admin-activity-sanitized.png"
+                    alt="Sanitized ESP.App admin activity dashboard showing usage visibility, activity review, and feedback loops."
+                    loading="lazy"
+                />
+                <figcaption>
+                    Admin activity dashboard for usage visibility, user behavior review, and operational feedback loops.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="role">
+        <div class="container case-two-column">
+            <div class="section-heading">
+                <p class="eyebrow">My Role</p>
+                <h2>End-to-end ownership across product and implementation</h2>
+            </div>
+            <div class="case-copy">
+                <p>
+                    I worked across product definition, data modeling, backend services, frontend workflows, reusable Python modules, workflow orchestration, report generation, scheduling, documentation, and stakeholder feedback. I translated manual analyst processes into application features and connected user-facing screens to reusable domain logic.
+                </p>
+                <ul class="check-list">
+                    <li>Scoped workflows with analysts and operational users</li>
+                    <li>Designed application surfaces for review, calculation, scheduling, and reporting</li>
+                    <li>Built React and TypeScript frontend workflows</li>
+                    <li>Built FastAPI backend services</li>
+                    <li>Connected reusable Python modules through backend APIs</li>
+                    <li>Integrated scheduled execution and run tracking</li>
+                    <li>Created admin and feedback surfaces to support internal adoption</li>
+                    <li>Documented workflows through embedded wiki guidance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="impact">
         <div class="container section-stack">
             <div class="section-heading">
-                <p class="eyebrow">Experience Snapshot</p>
-                <h2>Recent experience building operational data systems</h2>
+                <p class="eyebrow">Impact</p>
+                <h2>Purpose-built software for recurring operations</h2>
             </div>
+            <div class="impact-grid">
+                <article class="impact-card">Reduced dependence on spreadsheet-driven workflows</article>
+                <article class="impact-card">Improved visibility into scheduled and manual workflow execution</article>
+                <article class="impact-card">Standardized recurring operational processes</article>
+                <article class="impact-card">Connected reusable Python domain logic to user-facing application workflows</article>
+                <article class="impact-card">Created a repeatable path from data review to report generation</article>
+                <article class="impact-card">Supported analysts and operators with purpose-built internal software</article>
+                <article class="impact-card">Established a foundation for reusable automation across energy-program workflows</article>
+            </div>
+            <aside class="confidentiality-note">
+                <h3>Confidentiality note</h3>
+                <p>
+                    ESP.App is an internal application. This case study uses sanitized screenshots, generalized architecture descriptions, and public-safe workflow summaries. Proprietary data, customer information, credentials, internal paths, and implementation-sensitive details are omitted.
+                </p>
+            </aside>
+        </div>
+    </section>
 
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <h3>CPower Energy</h3>
-                    <p class="experience-role">Data Scientist / Operations Analytics</p>
-                    <p>
-                        Built analytics engineering workflows across forecasting, automation, reporting systems, internal tooling, and operational decision support. Worked with stakeholders to turn messy operational needs into reusable Python logic, trusted data foundations, and user-facing analytics for teams working under real constraints.
-                    </p>
-                </article>
-
-                <article class="experience-card">
-                    <h3>Upwork</h3>
-                    <p class="experience-role">Freelance Data Analyst / Dashboard Developer</p>
-                    <p>
-                        Delivered reporting and dashboard work for external clients that needed cleaner visibility into business metrics, more usable spreadsheet workflows, and clearer decision-support outputs.
-                    </p>
-                    <div class="experience-actions">
-                        <button class="btn btn-secondary" type="button" aria-haspopup="dialog" aria-controls="upwork-modal" data-upwork-open>Open Upwork Profile</button>
-                    </div>
-                </article>
+    <section class="section section-alt" id="other-work">
+        <div class="container section-stack">
+            <div class="section-heading">
+                <p class="eyebrow">Other Relevant Work</p>
+                <h2>Additional operational data work</h2>
+                <p class="section-lead">
+                    Other relevant work includes load forecasting and model evaluation, automated settlement reporting, Power BI operational dashboards, Azure SQL data modeling, and Python workflow automation for energy-market operations.
+                </p>
             </div>
         </div>
     </section>
@@ -520,57 +413,23 @@
         <div class="container section-stack contact-section">
             <div class="contact-copy">
                 <div class="section-heading">
-                    <p class="eyebrow">Resume, Case Studies, and Contact</p>
-                    <h2>Hiring for forward-deployed software engineering?</h2>
+                    <p class="eyebrow">Resume, Links, And Contact</p>
+                    <h2>Hiring for forward-deployed data or analytics engineering?</h2>
                     <p class="section-lead">
-                        Review my resume, browse selected work on GitHub, or reach out if you are hiring for roles that combine customer implementation, Python automation, enterprise data workflows, and internal data products. I am especially interested in work where dependable software changes how teams operate.
+                        Review my resume, browse selected work on GitHub, or reach out if you are hiring for roles that combine customer implementation, Python automation, enterprise data workflows, and internal data products.
                     </p>
                 </div>
             </div>
 
             <div class="contact-actions">
                 <a class="btn btn-primary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View Resume</a>
-                <a class="btn btn-secondary" href="#projects">View Case Studies</a>
                 <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                 <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
-                <button class="btn btn-secondary" type="button" aria-haspopup="dialog" aria-controls="upwork-modal" data-upwork-open>Upwork</button>
                 <a class="btn btn-secondary" href="mailto:Tyler.Sims@cpower.com">Email</a>
             </div>
         </div>
     </section>
 </main>
-
-<div class="project-modal" id="upwork-modal" hidden>
-    <div class="project-modal-backdrop" data-upwork-close></div>
-    <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="upwork-modal-title">
-        <button class="project-modal-close" type="button" aria-label="Close Upwork details" data-upwork-close>
-            Close
-        </button>
-        <div class="project-modal-content">
-            <div class="project-modal-header">
-                <p class="eyebrow">Upwork</p>
-                <h2 class="project-modal-title" id="upwork-modal-title">Work with me through Upwork</h2>
-            </div>
-            <p class="project-summary">
-                I use Upwork for freelance work that benefits from structured scope, milestone tracking, and secure payment handling.
-            </p>
-            <p class="project-summary">
-                It is a straightforward option for clients who want a formal engagement path for analytics, reporting, or internal tooling support.
-            </p>
-            <div class="project-actions">
-                <a
-                    class="btn btn-primary"
-                    href="https://www.upwork.com/freelancers/tylerjoesims?mp_source=share"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Visit Upwork Profile
-                </a>
-                <button class="btn btn-secondary" type="button" data-upwork-close>Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <footer class="site-footer">
     <div class="container footer-inner">

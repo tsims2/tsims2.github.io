@@ -1,6 +1,6 @@
-# Tyler Sims Portfolio
+# Tyler Sims ESP.App Case Study
 
-Single-page portfolio site for Tyler Sims, focused on forward-deployed software engineering, enterprise data workflows, Python automation, internal data products, and decision-support tooling.
+Single-page case study site for Tyler Sims, focused on ESP.App: an internal operations control plane for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics.
 
 ## Local use
 

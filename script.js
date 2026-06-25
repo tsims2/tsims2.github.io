@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     renderConstellationBackground();
-    initUpworkModal();
 
     const siteHeader = document.querySelector(".site-header");
     const heroSection = document.querySelector("#overview");
@@ -49,41 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((section) => sectionObserver.observe(section));
 });
-
-function syncModalBodyState() {
-    const hasOpenModal = Boolean(document.querySelector(".project-modal:not([hidden])"));
-    document.body.classList.toggle("modal-open", hasOpenModal);
-}
-
-function initUpworkModal() {
-    const modal = document.getElementById("upwork-modal");
-    const openButtons = document.querySelectorAll("[data-upwork-open]");
-    const closeButtons = modal?.querySelectorAll("[data-upwork-close]");
-
-    if (!modal || !openButtons.length) return;
-
-    const closeModal = () => {
-        modal.hidden = true;
-        syncModalBodyState();
-    };
-
-    openButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            modal.hidden = false;
-            syncModalBodyState();
-        });
-    });
-
-    closeButtons?.forEach((button) => {
-        button.addEventListener("click", closeModal);
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !modal.hidden) {
-            closeModal();
-        }
-    });
-}
 
 function renderConstellationBackground() {
     const canvas = document.createElement("canvas");
