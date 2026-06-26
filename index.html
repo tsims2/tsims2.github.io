@@ -27,415 +27,469 @@
     <link rel="icon" href="assets/tyler-logo/tyler-joe-sims-logo.png" type="image/png" />
 </head>
 <body>
+<a class="skip-link" href="#case-study">Skip to case study</a>
+
 <header class="site-header" id="top">
-    <div class="container header-inner">
-        <a class="site-name" href="#top" aria-label="Tyler Sims home">
+    <div class="container header-shell">
+        <a class="site-brand" href="#overview" aria-label="Tyler Sims home">
             <img
                 src="assets/tyler-logo/tyler-joe-sims-logo.png"
                 alt="Tyler Sims logo"
                 class="site-logo"
             />
-            <span class="site-name-text">Tyler Sims</span>
+            <span>
+                <strong>Tyler Sims</strong>
+                <span>Forward-Deployed Data Scientist &amp; Analytics Engineer</span>
+            </span>
         </a>
-        <nav class="nav" aria-label="Primary">
-            <a href="#case-study" class="nav-link">Case study</a>
-            <a href="#architecture" class="nav-link">Architecture</a>
-            <a href="#workflows" class="nav-link">Workflows</a>
-            <a href="#impact" class="nav-link">Impact</a>
-            <a href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" class="nav-link" target="_blank" rel="noopener">Resume</a>
-            <a href="#contact" class="nav-link">Contact</a>
+        <nav class="section-nav" aria-label="Primary">
+            <a class="nav-link" href="#overview">Overview</a>
+            <a class="nav-link" href="#architecture">Architecture</a>
+            <a class="nav-link" href="#workflows">Workflows</a>
+            <a class="nav-link" href="#execution">Execution</a>
+            <a class="nav-link" href="#impact">Impact</a>
+            <a class="nav-link" href="#contact">Contact</a>
         </nav>
     </div>
 </header>
 
 <main>
-    <section class="hero esp-hero" id="overview">
-        <div class="container hero-layout esp-hero-layout section-card hero-card">
-            <div class="hero-copy esp-hero-copy">
-                <p class="eyebrow">Tyler Sims</p>
-                <h1>ESP.App</h1>
-                <p class="hero-title">
-                    Forward-Deployed Data Scientist &amp; Analytics Engineer
+    <section class="hero" id="overview">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
+            <div class="hero-copy" data-reveal>
+                <p class="section-label">ESP.App case study</p>
+                <p class="identity-line">Tyler Sims</p>
+                <p class="role-line">Forward-Deployed Data Scientist &amp; Analytics Engineer</p>
+                <h1>Production workflow software for energy operations</h1>
+                <p class="hero-subhead">
+                    I build production data applications and workflow automation systems for operational teams.
                 </p>
                 <p class="hero-summary">
-                    I build production data applications and workflow automation systems for operational teams. ESP.App is an internal operations application I built to manage energy-program workflows across enrollments, events, performance calculations, settlements, reporting, scheduling, run tracking, and artifact generation.
+                    ESP.App is an internal operations application I built to manage energy-program workflows across enrollments, events, performance calculations, settlements, reporting, scheduling, run tracking, and artifact generation.
                 </p>
-                <ul class="tech-chip-list hero-tech-list" aria-label="Technology stack">
-                    <li>Python</li>
-                    <li>TypeScript</li>
-                    <li>React</li>
-                    <li>FastAPI</li>
-                    <li>SQLAlchemy</li>
-                    <li>Celery</li>
-                    <li>Redis</li>
-                    <li>PostgreSQL</li>
-                    <li>Azure SQL</li>
-                    <li>Power BI</li>
-                </ul>
-                <div class="hero-actions">
+                <div class="hero-actions" aria-label="Primary actions">
                     <a class="btn btn-primary" href="#case-study">View case study</a>
                     <a class="btn btn-secondary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View resume</a>
                     <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </div>
 
-            <figure class="hero-visual hero-compare-panel">
-                <div class="hero-compare-grid">
-                    <div class="hero-compare-shot">
-                        <p>Workflow settings</p>
-                        <img
-                            src="assets/ESPApp/Setting Controls.png"
-                            alt="Sanitized ESP.App settings controls screen in light mode."
-                            loading="eager"
-                        />
-                    </div>
-                    <div class="hero-compare-shot hero-compare-shot-dark">
-                        <p>Dark mode view</p>
-                        <img
-                            src="assets/ESPApp/Setting Controls Dark Mode.png"
-                            alt="Sanitized ESP.App settings controls screen in dark mode."
-                            loading="eager"
-                        />
-                    </div>
-                </div>
+            <figure class="hero-product-shot screenshot-frame" data-reveal>
+                <img
+                    src="assets/ESPApp/esp-app-03-performance-workflow-sanitized.png"
+                    alt="Sanitized ESP.App performance workflow screen showing an internal application surface for reviewing operational workflow rows."
+                    loading="eager"
+                />
                 <figcaption>
-                    Side-by-side settings controls showing the light and dark mode interface treatment.
+                    Performance workflow surface for review, validation, calculation, and downstream action.
                 </figcaption>
+                <div class="feature-chip feature-chip-one">Scheduled workflows</div>
+                <div class="feature-chip feature-chip-two">Run history</div>
+                <div class="feature-chip feature-chip-three">Artifact generation</div>
+                <div class="feature-chip feature-chip-four">Admin controls</div>
             </figure>
         </div>
     </section>
 
-    <section class="section section-alt" id="case-study">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Overview</p>
-                <h2>ESP.App: Internal operations control plane</h2>
-                <p class="section-lead">
-                    ESP.App is a browser-based internal platform for turning manual energy operations workflows into repeatable application workflows. It provides user-facing screens for reviewing operational data, running calculations, generating reports, managing schedules, tracking workflow execution, and administering access.
-                </p>
-                <p class="section-lead">
-                    ESP.Artifacts contains the reusable Python domain logic. ESP.App is the application layer that lets users run, schedule, review, monitor, and manage those workflows.
-                </p>
-            </div>
-
-            <div class="summary-card-grid">
-                <article class="summary-card">
-                    <p>Product</p>
-                    <h3>Internal operations control plane</h3>
-                </article>
-                <article class="summary-card">
-                    <p>Domain</p>
-                    <h3>Energy operations and demand response</h3>
-                </article>
-                <article class="summary-card">
-                    <p>Role</p>
-                    <h3>Product-minded data scientist / analytics engineer</h3>
-                </article>
-                <article class="summary-card">
-                    <p>Stack</p>
-                    <h3>React, TypeScript, FastAPI, Python, SQLAlchemy, Celery, Redis, PostgreSQL, Azure SQL</h3>
-                </article>
-            </div>
+    <section class="proof-band" aria-label="ESP.App summary">
+        <div class="container proof-grid" data-reveal>
+            <article class="proof-card">
+                <p>Product</p>
+                <h2>Internal operations application</h2>
+            </article>
+            <article class="proof-card">
+                <p>Domain</p>
+                <h2>Energy operations and demand response</h2>
+            </article>
+            <article class="proof-card">
+                <p>Ownership</p>
+                <h2>Designed ESP.Artifacts + built ESP.App</h2>
+            </article>
+            <article class="proof-card">
+                <p>Stack</p>
+                <h2>React, TypeScript, FastAPI, Python, Celery, Redis, SQL</h2>
+            </article>
         </div>
     </section>
 
-    <section class="section" id="problem">
-        <div class="container case-two-column section-card">
-            <div class="section-heading">
-                <p class="eyebrow">The problem</p>
-                <h2>Critical workflows lived outside a product surface</h2>
-            </div>
-            <div class="case-copy">
+    <section class="section overview-section" id="case-study">
+        <div class="container split-layout">
+            <div class="section-copy" data-reveal>
+                <p class="section-label">Overview</p>
+                <h2>From spreadsheet-heavy operations to repeatable workflows</h2>
                 <p>
-                    Energy operations workflows often depend on spreadsheets, scripts, analyst memory, file drops, and manual handoffs. That makes recurring work hard to review, hard to schedule, hard to audit, and hard to scale across programs. ESP.App was built to bring those workflows into a single internal product surface with clearer execution, review, and operational visibility.
+                    ESP.App turns spreadsheet-heavy analyst workflows into repeatable application workflows. It gives users a browser-based surface for reviewing operational data, running calculations, generating reports, managing schedules, tracking workflow execution, and administering access.
                 </p>
-                <ul class="check-list">
-                    <li>Manual spreadsheet-driven processes</li>
-                    <li>Recurring calculations and reporting workflows</li>
-                    <li>Multiple datasets and program-specific rules</li>
-                    <li>Limited visibility into what ran, when it ran, and what was produced</li>
-                    <li>Need for reusable workflows that analysts and operators could actually use</li>
-                </ul>
+            </div>
+            <aside class="callout-panel" data-reveal>
+                <p>Product relationship</p>
+                <h3>ESP.Artifacts contains the reusable Python domain logic. ESP.App is the application layer that lets users run, schedule, review, monitor, and manage those workflows.</h3>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section problem-section" id="problem">
+        <div class="container">
+            <div class="section-copy section-copy-centered" data-reveal>
+                <p class="section-label">The problem</p>
+                <h2>Manual work had no durable product surface</h2>
+                <p>
+                    Energy operations workflows often depend on spreadsheets, scripts, analyst memory, file drops, and manual handoffs. That makes recurring work hard to review, schedule, audit, and scale across programs.
+                </p>
+            </div>
+
+            <div class="problem-map" data-reveal>
+                <div class="before-cluster" aria-label="Before ESP.App">
+                    <p class="cluster-title">Before ESP.App</p>
+                    <div class="problem-card">Spreadsheets</div>
+                    <div class="problem-card">One-off scripts</div>
+                    <div class="problem-card">Manual handoffs</div>
+                    <div class="problem-card">Shared folders</div>
+                    <div class="problem-card">Analyst memory</div>
+                    <div class="problem-card">Limited run visibility</div>
+                </div>
+                <div class="transition-arrow" aria-hidden="true">&rarr;</div>
+                <div class="after-panel">
+                    <p class="cluster-title">After ESP.App</p>
+                    <h3>Repeatable workflows with review, scheduling, logs, and generated outputs.</h3>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="architecture">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">What I built</p>
-                <h2>A control plane over reusable domain logic</h2>
-                <p class="section-lead">
+    <section class="section build-section" id="architecture">
+        <div class="container">
+            <div class="section-copy" data-reveal>
+                <p class="section-label">What I built</p>
+                <h2>A reusable domain layer exposed through an internal product</h2>
+                <p>
                     I designed ESP.Artifacts as the reusable Python domain layer, then built ESP.App as the internal application that exposed that logic through review screens, workflow execution, scheduling, run logs, downloads, admin controls, and feedback loops.
                 </p>
             </div>
 
-            <div class="layer-grid">
+            <div class="layer-grid" data-reveal>
                 <article class="layer-card">
-                    <p class="eyebrow">ESP.Artifacts</p>
-                    <h3>Python domain layer</h3>
-                    <p>
-                        A reusable Python domain library I designed for database access, external data clients, baseline and settlement calculations, data quality checks, payment file generation, statement generation, performance report generation, and program-specific automation packages.
-                    </p>
+                    <div class="layer-heading">
+                        <p>Layer 1</p>
+                        <h3>ESP.Artifacts</h3>
+                        <span>Reusable Python domain layer</span>
+                    </div>
+                    <ul>
+                        <li>Database access</li>
+                        <li>External data clients</li>
+                        <li>Baseline and performance calculations</li>
+                        <li>Settlement support</li>
+                        <li>Data quality checks</li>
+                        <li>Report generation</li>
+                        <li>Payment files and statements</li>
+                        <li>Program-specific automation</li>
+                    </ul>
                 </article>
-                <article class="layer-card">
-                    <p class="eyebrow">ESP.App</p>
-                    <h3>Internal web application</h3>
-                    <p>
-                        A React/FastAPI internal web application I built to expose that domain logic through user workflows, review screens, schedules, run logs, downloads, access controls, feedback tools, and admin interfaces.
-                    </p>
+                <article class="layer-card layer-card-app">
+                    <div class="layer-heading">
+                        <p>Layer 2</p>
+                        <h3>ESP.App</h3>
+                        <span>Internal application layer</span>
+                    </div>
+                    <ul>
+                        <li>Review screens</li>
+                        <li>Workflow execution</li>
+                        <li>Scheduling</li>
+                        <li>Run logs</li>
+                        <li>Downloads</li>
+                        <li>Admin controls</li>
+                        <li>Feedback loops</li>
+                        <li>User activity tracking</li>
+                    </ul>
                 </article>
             </div>
 
-            <ol class="architecture-diagram architecture-map" aria-label="Public-safe ESP.App architecture diagram">
-                <li class="architecture-tier architecture-tier-ui">
-                    <p>Product surface</p>
-                    <h3>React + TypeScript frontend</h3>
-                    <span>User workflows, review screens, schedules, downloads, admin, and feedback</span>
-                </li>
-                <li class="architecture-tier architecture-tier-api">
-                    <p>API</p>
-                    <h3>FastAPI backend</h3>
-                    <span>Workflow endpoints, access control, orchestration entry points, and artifact requests</span>
-                </li>
-                <li class="architecture-tier">
-                    <p>Persistence mapping</p>
-                    <h3>SQLAlchemy persistence</h3>
-                    <span>Application models, query boundaries, run records, schedules, and user state</span>
-                </li>
-                <li class="architecture-tier">
-                    <p>Async execution</p>
-                    <h3>Celery workers + Beat</h3>
-                    <span>Scheduled jobs, ordered workflow steps, background dispatch, and run tracking</span>
-                </li>
-                <li class="architecture-tier">
-                    <p>Queue</p>
-                    <h3>Redis queue</h3>
-                    <span>Background task broker for workflow execution and scheduled automation</span>
-                </li>
-                <li class="architecture-tier">
-                    <p>Application database</p>
-                    <h3>PostgreSQL app database</h3>
-                    <span>Application state, users, schedules, run metadata, and workflow records</span>
-                </li>
-                <li class="architecture-tier architecture-tier-domain">
-                    <p>Reusable domain logic</p>
-                    <h3>ESP.Artifacts Python domain layer</h3>
-                    <span>Database clients, calculations, data quality checks, reports, statements, and generated files</span>
-                </li>
-                <li class="architecture-tier architecture-tier-external">
-                    <p>Operational inputs and outputs</p>
-                    <h3>External operational data systems + file destinations</h3>
-                    <span>Public-safe representation of source systems, downstream exports, and business-facing artifacts</span>
-                </li>
-            </ol>
+            <div class="relationship-strip" aria-label="ESP.App product relationship" data-reveal>
+                <span>ESP.Artifacts</span>
+                <span aria-hidden="true">&rarr;</span>
+                <span>ESP.App</span>
+                <span aria-hidden="true">&rarr;</span>
+                <span>Analysts and operators</span>
+            </div>
+
+            <div class="architecture-panel" data-reveal>
+                <div class="section-copy section-copy-compact">
+                    <p class="section-label">Architecture</p>
+                    <h2>Application workflow mapped to production services</h2>
+                </div>
+                <ol class="architecture-flow" aria-label="Public-safe ESP.App architecture diagram">
+                    <li class="architecture-node">
+                        <p>01</p>
+                        <h3>React + TypeScript UI</h3>
+                        <span>Review screens, workflow actions, schedules, downloads, admin, feedback</span>
+                    </li>
+                    <li class="architecture-node">
+                        <p>02</p>
+                        <h3>FastAPI services</h3>
+                        <span>Workflow endpoints, access checks, orchestration entry points</span>
+                    </li>
+                    <li class="architecture-node">
+                        <p>03</p>
+                        <h3>SQLAlchemy + PostgreSQL app state</h3>
+                        <span>Users, schedules, run records, workflow metadata, application state</span>
+                    </li>
+                    <li class="architecture-node">
+                        <p>04</p>
+                        <h3>Celery workers + Celery Beat + Redis</h3>
+                        <span>Async dispatch, ordered workflow steps, scheduled execution, queues</span>
+                    </li>
+                    <li class="architecture-node">
+                        <p>05</p>
+                        <h3>ESP.Artifacts Python domain layer</h3>
+                        <span>Calculations, quality checks, reporting, settlement support, files</span>
+                    </li>
+                    <li class="architecture-node">
+                        <p>06</p>
+                        <h3>Azure SQL + operational data + file outputs</h3>
+                        <span>Operational inputs, governed source data, generated business artifacts</span>
+                    </li>
+                </ol>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="workflows">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Product workflow</p>
-                <h2>From operational data to repeatable workflow</h2>
-                <p class="section-lead">
-                    ESP.App gives users a structured surface to filter, review, validate, calculate, and export operational results. Instead of running one-off scripts or editing spreadsheets, users work through repeatable application screens connected to backend services and reusable Python modules.
-                </p>
-            </div>
-
-            <figure class="screenshot-panel screenshot-panel-large">
+    <section class="section workflow-section" id="workflows">
+        <div class="container workflow-layout">
+            <figure class="screenshot-frame screenshot-frame-large" data-reveal>
                 <img
                     src="assets/ESPApp/esp-app-03-performance-workflow-sanitized.png"
-                    alt="Sanitized ESP.App workflow screen for reviewing events, operational results, validation state, and actions."
+                    alt="Sanitized ESP.App workflow screen for reviewing operational events, results, validation state, and workflow actions."
                     loading="lazy"
                 />
                 <figcaption>
-                    Operational workflow surface for reviewing events, site-level results, validation status, and downstream actions.
+                    Operational workflow surface for event review, validation, calculation, and downstream actions.
                 </figcaption>
             </figure>
 
-            <ol class="workflow-list">
-                <li>User selects operational scope.</li>
-                <li>App loads relevant events, assets, or workflow rows.</li>
-                <li>User reviews, filters, validates, or triggers an action.</li>
-                <li>Backend services call reusable artifact modules.</li>
-                <li>Outputs are written, logged, exported, or made available for downstream review.</li>
-            </ol>
+            <div class="workflow-copy" data-reveal>
+                <p class="section-label">Product workflow</p>
+                <h2>From operational scope to logged output</h2>
+                <p>
+                    ESP.App gives users a structured surface to filter, review, validate, calculate, and export operational results. Instead of running one-off scripts or editing spreadsheets, users work through repeatable application screens connected to backend services and reusable Python modules.
+                </p>
+                <ol class="numbered-flow">
+                    <li><span>1</span>Select operational scope</li>
+                    <li><span>2</span>Load events, assets, and workflow rows</li>
+                    <li><span>3</span>Review, filter, and validate</li>
+                    <li><span>4</span>Trigger calculation or output generation</li>
+                    <li><span>5</span>Backend calls reusable artifact modules</li>
+                    <li><span>6</span>Outputs are logged, exported, or made available for review</li>
+                </ol>
+            </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="execution">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Execution and observability</p>
-                <h2>Scheduled execution with run visibility</h2>
-                <p class="section-lead">
-                    The app supports scheduled workflows, ordered workflow steps, run status tracking, logs, and execution history. This turns recurring operational work into observable workflows rather than hidden scripts.
+    <section class="section execution-section" id="execution">
+        <div class="container">
+            <div class="section-copy section-copy-centered" data-reveal>
+                <p class="section-label">Execution and observability</p>
+                <h2>Scheduled execution with production-minded run visibility</h2>
+                <p>
+                    The app supports Celery dispatch, ordered workflow steps, success and failure visibility, logs, run history, and schedule-driven execution. Recurring operational work becomes observable instead of hidden behind manual triggers.
                 </p>
             </div>
 
-            <div class="screenshot-grid">
-                <figure class="screenshot-panel">
+            <div class="execution-grid" data-reveal>
+                <article class="execution-card">
+                    <p>Scheduled execution</p>
+                    <h3>Recurring workflows can be configured and dispatched without depending on manual triggers.</h3>
+                </article>
+                <article class="execution-card">
+                    <p>Run history</p>
+                    <h3>Users can inspect what ran, when it ran, whether it succeeded, and where logs or outputs live.</h3>
+                </article>
+                <article class="execution-card">
+                    <p>Operational traceability</p>
+                    <h3>Ordered steps, statuses, and logs make background automation visible to analysts and operators.</h3>
+                </article>
+            </div>
+
+            <div class="dual-screenshots" data-reveal>
+                <figure class="screenshot-frame">
                     <img
                         src="assets/ESPApp/esp-app-04-run-history-sanitized.png"
                         alt="Sanitized ESP.App run history screen with workflow execution rows, statuses, logs, and run details."
                         loading="lazy"
                     />
-                    <figcaption>
-                        Run history view showing scheduled workflow execution, statuses, logs, and run-level traceability.
-                    </figcaption>
+                    <figcaption>Run history view showing statuses, logs, and run-level traceability.</figcaption>
                 </figure>
-                <figure class="screenshot-panel">
+                <figure class="screenshot-frame">
                     <img
                         src="assets/ESPApp/esp-app-05-schedule-builder-sanitized.png"
                         alt="Sanitized ESP.App schedule builder screen for defining recurring workflow execution and ordered automation steps."
                         loading="lazy"
                     />
-                    <figcaption>
-                        Schedule builder for defining recurring workflow execution and ordered automation steps.
-                    </figcaption>
+                    <figcaption>Schedule builder for recurring workflow execution and ordered automation steps.</figcaption>
                 </figure>
             </div>
-
-            <ul class="capability-list">
-                <li>Scheduled jobs</li>
-                <li>Workflow steps</li>
-                <li>Celery dispatch</li>
-                <li>Run logs</li>
-                <li>Success/failure visibility</li>
-                <li>Operational traceability</li>
-                <li>Reduced dependence on manual triggers</li>
-            </ul>
         </div>
     </section>
 
-    <section class="section" id="artifact-generation">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Artifact generation</p>
-                <h2>Generating business-facing outputs from operational workflows</h2>
-                <p class="section-lead">
-                    ESP.App does not stop at internal tables. It supports downstream artifact generation: reports, exports, downloadable files, and structured outputs used by operational stakeholders. It helps turn reviewed operational data into structured outputs and creates a repeatable path from data review to report generation.
+    <section class="section artifact-section" id="artifact-generation">
+        <div class="container">
+            <div class="section-copy" data-reveal>
+                <p class="section-label">Artifact generation</p>
+                <h2>Business-facing artifacts from reviewed operational data</h2>
+                <p>
+                    ESP.App supports a repeatable path from operational review to structured outputs, including reports, exports, downloadable files, and stakeholder-ready deliverables. The payoff is not just reporting. It is a controlled path from data review to generated business artifacts.
                 </p>
             </div>
 
-            <div class="screenshot-grid">
-                <figure class="screenshot-panel">
+            <div class="artifact-flow" aria-label="Artifact generation flow" data-reveal>
+                <article>Reviewed data</article>
+                <span aria-hidden="true">&rarr;</span>
+                <article>Configured report</article>
+                <span aria-hidden="true">&rarr;</span>
+                <article>Generated artifact</article>
+                <span aria-hidden="true">&rarr;</span>
+                <article>Downstream stakeholder output</article>
+            </div>
+
+            <div class="artifact-layout">
+                <figure class="screenshot-frame" data-reveal>
                     <img
                         src="assets/ESPApp/esp-app-07-report-builder-sanitized.png"
                         alt="Sanitized ESP.App report builder screen for selecting operational data and configuring structured outputs."
                         loading="lazy"
                     />
-                    <figcaption>
-                        Report builder workflow for turning selected operational data into structured outputs.
-                    </figcaption>
+                    <figcaption>Report builder workflow for configuring structured operational outputs.</figcaption>
                 </figure>
-                <figure class="screenshot-panel">
+                <figure class="screenshot-frame report-output-frame" data-reveal>
                     <img
                         src="assets/ESPApp/esp-app-08-report-output-sanitized.png"
                         alt="Sanitized generated report output from ESP.App showing a business-facing artifact."
                         loading="lazy"
                     />
-                    <figcaption>
-                        Generated report output showing how internal workflows produce business-facing artifacts.
-                    </figcaption>
+                    <figcaption>Generated output showing how internal workflows produce business-facing artifacts.</figcaption>
                 </figure>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="documentation">
-        <div class="container case-two-column case-two-column-media section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Documentation</p>
-                <h2>Documentation inside the workflow</h2>
-                <p class="section-lead">
-                    ESP.App includes embedded page-level and program-level guidance so users can access instructions without leaving the operational workflow. This helps reduce dependence on tribal knowledge and makes program-specific processes easier to follow.
-                </p>
-            </div>
-            <figure class="screenshot-panel">
+    <section class="section documentation-section" id="documentation">
+        <div class="container split-layout split-layout-reverse">
+            <figure class="screenshot-frame" data-reveal>
                 <img
                     src="assets/ESPApp/esp-app-02-embedded-wiki-sanitized.png"
                     alt="Sanitized ESP.App embedded wiki overlay with page-specific and program-specific workflow guidance."
                     loading="lazy"
                 />
-                <figcaption>
-                    Embedded wiki overlay providing page-specific and program-specific workflow guidance.
-                </figcaption>
+                <figcaption>Embedded guidance keeps instructions inside the operational workflow.</figcaption>
             </figure>
+            <div class="section-copy" data-reveal>
+                <p class="section-label">Documentation</p>
+                <h2>Documentation inside the workflow</h2>
+                <p>
+                    ESP.App includes embedded page-level and program-level guidance so users can access instructions without leaving the operational flow. This reduces reliance on tribal knowledge and makes program-specific processes easier to follow.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="admin">
-        <div class="container case-two-column case-two-column-media section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Admin and feedback</p>
-                <h2>Admin tooling for a real internal product</h2>
-                <p class="section-lead">
-                    The platform includes authentication, user roles, page access patterns, activity tracking, admin views, and page feedback. These features matter because internal tools still need operational ownership, usage visibility, and feedback loops.
+    <section class="section admin-section" id="admin">
+        <div class="container admin-layout">
+            <div class="section-copy" data-reveal>
+                <p class="section-label">Admin and feedback</p>
+                <h2>Internal product maturity beyond the workflow screen</h2>
+                <p>
+                    The platform includes authentication, roles and access, user activity, page feedback, admin visibility, and adoption support. Internal tools still need operational ownership, product feedback loops, and usage visibility.
                 </p>
-                <ul class="capability-list capability-list-compact">
-                    <li>Role-aware access</li>
-                    <li>User administration</li>
-                    <li>Activity tracking</li>
-                    <li>Page feedback</li>
-                    <li>Workflow usage visibility</li>
-                    <li>Internal product operations</li>
-                </ul>
+                <div class="feature-grid" aria-label="Admin and feedback features">
+                    <span>Authentication</span>
+                    <span>Roles/access</span>
+                    <span>User activity</span>
+                    <span>Page feedback</span>
+                    <span>Admin visibility</span>
+                    <span>Adoption support</span>
+                </div>
             </div>
-            <figure class="screenshot-panel">
+            <figure class="screenshot-frame" data-reveal>
                 <img
                     src="assets/ESPApp/esp-app-09-admin-activity-sanitized.png"
                     alt="Sanitized ESP.App admin activity dashboard showing usage visibility, activity review, and feedback loops."
                     loading="lazy"
                 />
-                <figcaption>
-                    Admin activity dashboard for usage visibility, user behavior review, and operational feedback loops.
-                </figcaption>
+                <figcaption>Admin activity dashboard for usage visibility, user behavior review, and feedback loops.</figcaption>
             </figure>
         </div>
     </section>
 
-    <section class="section section-alt" id="role">
-        <div class="container case-two-column section-card">
-            <div class="section-heading">
-                <p class="eyebrow">My role</p>
-                <h2>End-to-end ownership across product and implementation</h2>
-            </div>
-            <div class="case-copy">
+    <section class="section role-section" id="role">
+        <div class="container">
+            <div class="section-copy section-copy-centered" data-reveal>
+                <p class="section-label">My role</p>
+                <h2>End-to-end ownership across discovery, architecture, implementation, and adoption</h2>
                 <p>
-                    I worked across product definition, data modeling, backend services, frontend workflows, reusable Python modules, workflow orchestration, report generation, scheduling, documentation, and stakeholder feedback. I translated manual analyst processes into application features and connected user-facing screens to reusable domain logic.
+                    I worked across product definition, domain-layer design, backend services, frontend workflows, workflow orchestration, report generation, scheduling, documentation, and stakeholder feedback.
                 </p>
-                <ul class="check-list">
-                    <li>Scoped workflows with analysts and operational users</li>
-                    <li>Designed application surfaces for review, calculation, scheduling, and reporting</li>
-                    <li>Built React and TypeScript frontend workflows</li>
-                    <li>Built FastAPI backend services</li>
-                    <li>Connected reusable Python modules through backend APIs</li>
-                    <li>Integrated scheduled execution and run tracking</li>
-                    <li>Created admin and feedback surfaces to support internal adoption</li>
-                    <li>Documented workflows through embedded wiki guidance</li>
-                </ul>
+            </div>
+
+            <div class="role-timeline" data-reveal>
+                <article>
+                    <p>01</p>
+                    <h3>Product discovery</h3>
+                    <ul>
+                        <li>Scoped workflows with analysts and operators</li>
+                        <li>Translated manual processes into application features</li>
+                    </ul>
+                </article>
+                <article>
+                    <p>02</p>
+                    <h3>System design</h3>
+                    <ul>
+                        <li>Designed ESP.Artifacts domain layer</li>
+                        <li>Designed ESP.App workflow and application layer</li>
+                        <li>Separated domain logic from product surface</li>
+                    </ul>
+                </article>
+                <article>
+                    <p>03</p>
+                    <h3>Implementation</h3>
+                    <ul>
+                        <li>Built React/TypeScript frontend workflows</li>
+                        <li>Built FastAPI backend services</li>
+                        <li>Integrated Celery/Redis scheduling and execution</li>
+                        <li>Connected Azure SQL/PostgreSQL data layers</li>
+                    </ul>
+                </article>
+                <article>
+                    <p>04</p>
+                    <h3>Adoption and operations</h3>
+                    <ul>
+                        <li>Built admin controls</li>
+                        <li>Added feedback loops</li>
+                        <li>Documented workflows</li>
+                        <li>Supported repeatable usage</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="section" id="impact">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Impact</p>
+    <section class="section impact-section" id="impact">
+        <div class="container">
+            <div class="section-copy" data-reveal>
+                <p class="section-label">Impact</p>
                 <h2>Purpose-built software for recurring operations</h2>
             </div>
-            <ul class="impact-grid" role="list">
-                <li class="impact-card">Reduced dependence on spreadsheet-driven workflows</li>
-                <li class="impact-card">Improved visibility into scheduled and manual workflow execution</li>
-                <li class="impact-card">Standardized recurring operational processes</li>
-                <li class="impact-card">Connected reusable Python domain logic to user-facing application workflows</li>
-                <li class="impact-card">Created a repeatable path from data review to report generation</li>
-                <li class="impact-card">Supported analysts and operators with purpose-built internal software</li>
-                <li class="impact-card">Established a foundation for reusable automation across energy-program workflows</li>
-            </ul>
-            <aside class="confidentiality-note">
+
+            <div class="impact-grid" data-reveal>
+                <article>Reduced dependence on spreadsheet-driven workflows</article>
+                <article>Improved visibility into scheduled and manual workflow execution</article>
+                <article>Standardized recurring operational processes</article>
+                <article>Connected reusable Python domain logic to user-facing application workflows</article>
+                <article>Created a repeatable path from data review to report generation</article>
+                <article>Supported analysts and operators with purpose-built internal software</article>
+                <article>Established a foundation for reusable automation across energy-program workflows</article>
+            </div>
+
+            <aside class="confidentiality-note" data-reveal>
                 <h3>Confidentiality note</h3>
                 <p>
                     ESP.App is an internal application. This case study uses sanitized screenshots, generalized architecture descriptions, and public-safe workflow summaries. Proprietary data, customer information, credentials, internal paths, and implementation-sensitive details are omitted.
@@ -444,31 +498,26 @@
         </div>
     </section>
 
-    <section class="section section-alt" id="other-work">
-        <div class="container section-stack section-card">
-            <div class="section-heading">
-                <p class="eyebrow">Other relevant work</p>
-                <h2>Additional operational data work</h2>
-                <p class="section-lead">
-                    Additional work includes load forecasting and model evaluation, automated settlement reporting, operational Power BI dashboards, Azure SQL data modeling, and Python workflow automation for energy-market operations.
-                </p>
-            </div>
+    <section class="section other-work-section" id="other-work">
+        <div class="container narrow-container" data-reveal>
+            <p class="section-label">Other relevant work</p>
+            <h2>Additional operational data work</h2>
+            <p>
+                Additional work includes load forecasting and model evaluation, automated settlement reporting, operational Power BI dashboards, Azure SQL data modeling, and Python workflow automation for energy-market operations.
+            </p>
         </div>
     </section>
 
-    <section class="section" id="contact">
-        <div class="container section-stack contact-section section-card">
-            <div class="contact-copy">
-                <div class="section-heading">
-                    <p class="eyebrow">Resume, links, and contact</p>
-                    <h2>Hiring for forward-deployed software, data, or analytics engineering?</h2>
-                    <p class="section-lead">
-                        I build production data applications, workflow automation systems, and internal tools for operational teams working with complex data, messy business rules, and recurring operational workflows.
-                    </p>
-                </div>
+    <section class="section contact-section" id="contact">
+        <div class="container contact-panel" data-reveal>
+            <div>
+                <p class="section-label">Resume, links, and contact</p>
+                <h2>Hiring for forward-deployed software, data, or analytics engineering?</h2>
+                <p>
+                    I build production data applications, workflow automation systems, and internal tools for operational teams working with complex data, messy business rules, and recurring operational workflows.
+                </p>
             </div>
-
-            <div class="contact-actions">
+            <div class="contact-actions" aria-label="Contact actions">
                 <a class="btn btn-primary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View resume</a>
                 <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                 <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
@@ -480,7 +529,8 @@
 
 <footer class="site-footer">
     <div class="container footer-inner">
-        <p>Tyler Sims © 2026</p>
+        <p>Tyler Sims &copy; 2026</p>
+        <a href="#overview">Back to top</a>
     </div>
 </footer>
 
