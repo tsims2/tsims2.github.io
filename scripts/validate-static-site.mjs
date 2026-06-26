@@ -16,6 +16,7 @@ for (const section of requiredSections) {
 
 for (const match of html.matchAll(localAssetPattern)) {
     const reference = match[1];
+    const localPath = reference.split("?")[0];
 
     if (
         reference.startsWith("http") ||
@@ -25,7 +26,7 @@ for (const match of html.matchAll(localAssetPattern)) {
         continue;
     }
 
-    if (!existsSync(join(root, reference))) {
+    if (!existsSync(join(root, localPath))) {
         missing.push(`Missing local reference: ${reference}`);
     }
 }
