@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
         name="description"
-        content="A case study on ESP.App, an internal operations control plane for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics."
+        content="Case study on ESP.App, an internal operations application for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics."
     />
     <meta property="og:title" content="Tyler Sims | ESP.App Case Study" />
     <meta
         property="og:description"
-        content="ESP.App case study: an internal operations control plane for energy-program workflows, scheduled execution, artifact generation, and operational analytics."
+        content="ESP.App case study: an internal operations application for energy-program workflows, scheduled execution, artifact generation, and operational analytics."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tsims2.github.io/" />
@@ -50,7 +50,7 @@
 
 <main>
     <section class="hero esp-hero" id="overview">
-        <div class="container hero-layout esp-hero-layout">
+        <div class="container hero-layout esp-hero-layout section-card hero-card">
             <div class="hero-copy esp-hero-copy">
                 <p class="eyebrow">Tyler Sims</p>
                 <h1>ESP.App</h1>
@@ -58,7 +58,7 @@
                     Forward-Deployed Data Scientist &amp; Analytics Engineer
                 </p>
                 <p class="hero-summary">
-                    I build production data applications and workflow automation systems for operational teams. ESP.App is an internal operations control plane I built to manage energy-program workflows across enrollments, events, performance calculations, settlements, reporting, scheduling, run tracking, and artifact generation.
+                    I build production data applications and workflow automation systems for operational teams. ESP.App is an internal operations application I built to manage energy-program workflows across enrollments, events, performance calculations, settlements, reporting, scheduling, run tracking, and artifact generation.
                 </p>
                 <ul class="tech-chip-list hero-tech-list" aria-label="Technology stack">
                     <li>Python</li>
@@ -73,8 +73,8 @@
                     <li>Power BI</li>
                 </ul>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#case-study">View ESP.App Case Study</a>
-                    <a class="btn btn-secondary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View Resume</a>
+                    <a class="btn btn-primary" href="#case-study">View case study</a>
+                    <a class="btn btn-secondary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View resume</a>
                     <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
                     <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                 </div>
@@ -110,9 +110,12 @@
         <div class="container section-stack section-card">
             <div class="section-heading">
                 <p class="eyebrow">Overview</p>
-                <h2>ESP.App: Internal Operations Control Plane</h2>
+                <h2>ESP.App: Internal operations control plane</h2>
                 <p class="section-lead">
                     ESP.App is a browser-based internal platform for turning manual energy operations workflows into repeatable application workflows. It provides user-facing screens for reviewing operational data, running calculations, generating reports, managing schedules, tracking workflow execution, and administering access.
+                </p>
+                <p class="section-lead">
+                    ESP.Artifacts contains the reusable Python domain logic. ESP.App is the application layer that lets users run, schedule, review, monitor, and manage those workflows.
                 </p>
             </div>
 
@@ -164,7 +167,7 @@
                 <p class="eyebrow">What I built</p>
                 <h2>A control plane over reusable domain logic</h2>
                 <p class="section-lead">
-                    ESP.App separates reusable business logic from the browser-based product surface. The result is a maintainable two-layer model: a shared Python domain library and an internal web application that exposes those capabilities through workflows, review screens, schedules, logs, downloads, access controls, feedback tools, and admin interfaces.
+                    I designed ESP.Artifacts as the reusable Python domain layer, then built ESP.App as the internal application that exposed that logic through review screens, workflow execution, scheduling, run logs, downloads, admin controls, and feedback loops.
                 </p>
             </div>
 
@@ -173,51 +176,60 @@
                     <p class="eyebrow">ESP.Artifacts</p>
                     <h3>Python domain layer</h3>
                     <p>
-                        A shared Python domain library containing reusable business logic for database access, external data clients, baseline and settlement calculations, data quality checks, payment file generation, statement generation, performance report generation, and program-specific automation packages.
+                        A reusable Python domain library I designed for database access, external data clients, baseline and settlement calculations, data quality checks, payment file generation, statement generation, performance report generation, and program-specific automation packages.
                     </p>
                 </article>
                 <article class="layer-card">
                     <p class="eyebrow">ESP.App</p>
                     <h3>Internal web application</h3>
                     <p>
-                        A React/FastAPI internal web application that exposes that domain logic through user workflows, review screens, schedules, run logs, downloads, access controls, feedback tools, and admin interfaces.
+                        A React/FastAPI internal web application I built to expose that domain logic through user workflows, review screens, schedules, run logs, downloads, access controls, feedback tools, and admin interfaces.
                     </p>
                 </article>
             </div>
 
-            <div class="architecture-diagram architecture-map" aria-label="Public-safe ESP.App architecture diagram">
-                <div class="architecture-tier architecture-tier-ui">
+            <ol class="architecture-diagram architecture-map" aria-label="Public-safe ESP.App architecture diagram">
+                <li class="architecture-tier architecture-tier-ui">
                     <p>Product surface</p>
                     <h3>React + TypeScript frontend</h3>
                     <span>User workflows, review screens, schedules, downloads, admin, and feedback</span>
-                </div>
-                <div class="architecture-connector" aria-hidden="true">HTTPS / JSON API</div>
-                <div class="architecture-tier architecture-tier-api">
-                    <p>Application services</p>
+                </li>
+                <li class="architecture-tier architecture-tier-api">
+                    <p>API</p>
                     <h3>FastAPI backend</h3>
                     <span>Workflow endpoints, access control, orchestration entry points, and artifact requests</span>
-                </div>
-                <div class="architecture-tier">
-                    <p>Persistence</p>
-                    <h3>SQLAlchemy + PostgreSQL app database</h3>
-                    <span>Application state, users, schedules, run metadata, and workflow records</span>
-                </div>
-                <div class="architecture-tier">
+                </li>
+                <li class="architecture-tier">
+                    <p>Persistence mapping</p>
+                    <h3>SQLAlchemy persistence</h3>
+                    <span>Application models, query boundaries, run records, schedules, and user state</span>
+                </li>
+                <li class="architecture-tier">
                     <p>Async execution</p>
-                    <h3>Celery workers + Celery Beat + Redis queue</h3>
+                    <h3>Celery workers + Beat</h3>
                     <span>Scheduled jobs, ordered workflow steps, background dispatch, and run tracking</span>
-                </div>
-                <div class="architecture-tier architecture-tier-domain">
+                </li>
+                <li class="architecture-tier">
+                    <p>Queue</p>
+                    <h3>Redis queue</h3>
+                    <span>Background task broker for workflow execution and scheduled automation</span>
+                </li>
+                <li class="architecture-tier">
+                    <p>Application database</p>
+                    <h3>PostgreSQL app database</h3>
+                    <span>Application state, users, schedules, run metadata, and workflow records</span>
+                </li>
+                <li class="architecture-tier architecture-tier-domain">
                     <p>Reusable domain logic</p>
                     <h3>ESP.Artifacts Python domain layer</h3>
                     <span>Database clients, calculations, data quality checks, reports, statements, and generated files</span>
-                </div>
-                <div class="architecture-tier architecture-tier-external">
+                </li>
+                <li class="architecture-tier architecture-tier-external">
                     <p>Operational inputs and outputs</p>
-                    <h3>External operational systems + file destinations</h3>
+                    <h3>External operational data systems + file destinations</h3>
                     <span>Public-safe representation of source systems, downstream exports, and business-facing artifacts</span>
-                </div>
-            </div>
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -438,7 +450,7 @@
                 <p class="eyebrow">Other relevant work</p>
                 <h2>Additional operational data work</h2>
                 <p class="section-lead">
-                    Other relevant work includes load forecasting and model evaluation, automated settlement reporting, Power BI operational dashboards, Azure SQL data modeling, and Python workflow automation for energy-market operations.
+                    Additional work includes load forecasting and model evaluation, automated settlement reporting, operational Power BI dashboards, Azure SQL data modeling, and Python workflow automation for energy-market operations.
                 </p>
             </div>
         </div>
@@ -451,13 +463,13 @@
                     <p class="eyebrow">Resume, links, and contact</p>
                     <h2>Hiring for forward-deployed software, data, or analytics engineering?</h2>
                     <p class="section-lead">
-                        Review my resume, browse selected work on GitHub, or reach out if you are hiring for roles that combine customer implementation, production data applications, workflow automation systems, and internal tools for operational teams.
+                        I build production data applications, workflow automation systems, and internal tools for operational teams working with complex data, messy business rules, and recurring operational workflows.
                     </p>
                 </div>
             </div>
 
             <div class="contact-actions">
-                <a class="btn btn-primary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View Resume</a>
+                <a class="btn btn-primary" href="https://resume.co/@V7KoWI67OKBWeLPdXOmn" target="_blank" rel="noopener">View resume</a>
                 <a class="btn btn-secondary" href="https://github.com/tsims2" target="_blank" rel="noopener">GitHub</a>
                 <a class="btn btn-secondary" href="https://www.linkedin.com/in/tsims2/" target="_blank" rel="noopener">LinkedIn</a>
                 <a class="btn btn-secondary" href="mailto:Tyler.Sims@cpower.com">Email</a>
