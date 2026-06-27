@@ -16,7 +16,7 @@ for (const section of requiredSections) {
 
 for (const match of html.matchAll(localAssetPattern)) {
     const reference = match[1];
-    const localPath = reference.split("?")[0];
+    const localPath = decodeURIComponent(reference.split("?")[0]);
 
     if (
         reference.startsWith("http") ||
