@@ -1191,6 +1191,10 @@ h3 {
         padding: 0 20px;
     }
 
+    .header-shell {
+        padding-top: 16px;
+    }
+
     .site-brand {
         align-items: flex-start;
     }
@@ -1205,7 +1209,7 @@ h3 {
     }
 
     .hero {
-        padding-top: 136px;
+        padding-top: 148px;
         padding-bottom: 64px;
     }
 
