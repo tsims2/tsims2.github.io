@@ -1,22 +1,22 @@
 :root {
-    --bg: #070a0f;
-    --bg-panel: #0c1118;
-    --bg-panel-strong: #111821;
-    --surface: rgba(16, 23, 32, 0.88);
-    --surface-soft: rgba(255, 255, 255, 0.055);
-    --surface-light: #f4f7f5;
-    --surface-light-2: #e9efea;
-    --text: #f5f8f2;
-    --text-dark: #111820;
-    --muted: #a7b3bb;
-    --muted-dark: #53616a;
-    --border: rgba(255, 255, 255, 0.13);
-    --border-strong: rgba(86, 214, 194, 0.35);
-    --accent: #56d6c2;
-    --accent-2: #88c96a;
-    --accent-3: #f0b65a;
-    --accent-4: #8da2ff;
-    --danger-dark: #201617;
+    --bg: #1b2627;
+    --bg-panel: #223833;
+    --bg-panel-strong: #074e66;
+    --surface: rgba(42, 68, 59, 0.88);
+    --surface-soft: rgba(196, 218, 231, 0.08);
+    --surface-light: #e7f1f6;
+    --surface-light-2: #d8e9f1;
+    --text: #f7fbfc;
+    --text-dark: #172324;
+    --muted: #c4dae7;
+    --muted-dark: #365f68;
+    --border: rgba(196, 218, 231, 0.18);
+    --border-strong: rgba(74, 140, 166, 0.48);
+    --accent: #4a8ca6;
+    --accent-2: #c4dae7;
+    --accent-3: #2a443b;
+    --accent-4: #074e66;
+    --danger-dark: #202728;
     --shadow: 0 22px 60px rgba(0, 0, 0, 0.3);
     --shadow-soft: 0 16px 34px rgba(0, 0, 0, 0.18);
     --radius: 8px;
@@ -38,8 +38,8 @@ body {
     color: var(--text);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background:
-        linear-gradient(120deg, rgba(86, 214, 194, 0.08), transparent 32%),
-        linear-gradient(240deg, rgba(240, 182, 90, 0.08), transparent 34%),
+        linear-gradient(120deg, rgba(74, 140, 166, 0.14), transparent 32%),
+        linear-gradient(240deg, rgba(42, 68, 59, 0.36), transparent 34%),
         var(--bg);
     overflow-x: hidden;
 }
@@ -63,7 +63,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid rgba(86, 214, 194, 0.52);
+    outline: 3px solid rgba(74, 140, 166, 0.62);
     outline-offset: 4px;
 }
 
@@ -76,23 +76,6 @@ img {
     width: min(100%, var(--content-width));
     margin: 0 auto;
     padding: 0 32px;
-}
-
-.skip-link {
-    position: fixed;
-    top: 12px;
-    left: 12px;
-    z-index: 100;
-    padding: 10px 14px;
-    color: var(--text-dark);
-    background: var(--accent);
-    border-radius: var(--radius);
-    transform: translateY(-140%);
-    transition: transform 0.18s ease;
-}
-
-.skip-link:focus {
-    transform: translateY(0);
 }
 
 .site-header {
@@ -207,8 +190,8 @@ main section[id] {
     inset: 0;
     pointer-events: none;
     background:
-        linear-gradient(135deg, rgba(86, 214, 194, 0.12), transparent 28%),
-        linear-gradient(315deg, rgba(141, 162, 255, 0.12), transparent 32%),
+        linear-gradient(135deg, rgba(74, 140, 166, 0.22), transparent 28%),
+        linear-gradient(315deg, rgba(196, 218, 231, 0.12), transparent 32%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 58%);
 }
 
@@ -227,6 +210,7 @@ main section[id] {
 
 .hero-copy {
     grid-area: copy;
+    min-width: 0;
     max-width: 690px;
 }
 
@@ -265,7 +249,9 @@ h1,
 h2,
 h3,
 p {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 h1,
@@ -316,6 +302,7 @@ h3 {
 
 .hero-actions {
     grid-area: actions;
+    min-width: 0;
     margin-top: 22px;
 }
 
@@ -341,9 +328,9 @@ h3 {
 }
 
 .btn-primary {
-    color: #06100f;
+    color: #122021;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 18px 36px rgba(86, 214, 194, 0.2);
+    box-shadow: 0 18px 36px rgba(74, 140, 166, 0.24);
 }
 
 .btn-secondary {
@@ -389,12 +376,13 @@ h3 {
 .hero-product-shot {
     grid-area: shot;
     justify-self: end;
+    min-width: 0;
     width: min(100%, 760px);
     padding: 12px;
     overflow: hidden;
     background:
-        linear-gradient(145deg, rgba(86, 214, 194, 0.13), rgba(255, 255, 255, 0.055) 38%),
-        rgba(8, 12, 18, 0.86);
+        linear-gradient(145deg, rgba(74, 140, 166, 0.18), rgba(255, 255, 255, 0.055) 38%),
+        rgba(27, 38, 39, 0.88);
     transform: perspective(1400px) rotateY(-3deg) rotateX(1.5deg);
 }
 
@@ -448,7 +436,7 @@ h3 {
 .documentation-section .section-label,
 .role-section .section-label,
 .other-work-section .section-label {
-    color: #18786d;
+    color: var(--accent-4);
 }
 
 .overview-section .section-copy p,
@@ -510,8 +498,8 @@ h3 {
 .callout-panel {
     padding: 28px;
     background:
-        linear-gradient(135deg, rgba(86, 214, 194, 0.16), rgba(255, 255, 255, 0.06)),
-        #0f171f;
+        linear-gradient(135deg, rgba(74, 140, 166, 0.18), rgba(196, 218, 231, 0.08)),
+        var(--bg-panel);
     color: var(--text);
 }
 
@@ -549,7 +537,7 @@ h3 {
 
 .cluster-title {
     grid-column: 1 / -1;
-    color: var(--accent-3);
+    color: var(--accent-2);
 }
 
 .problem-card {
@@ -571,7 +559,7 @@ h3 {
 .after-panel {
     padding: 28px;
     background:
-        linear-gradient(135deg, rgba(86, 214, 194, 0.18), rgba(136, 201, 106, 0.12)),
+        linear-gradient(135deg, rgba(74, 140, 166, 0.2), rgba(42, 68, 59, 0.24)),
         rgba(255, 255, 255, 0.06);
 }
 
@@ -597,7 +585,7 @@ h3 {
 }
 
 .layer-card-app {
-    border-color: rgba(141, 162, 255, 0.3);
+    border-color: rgba(196, 218, 231, 0.34);
 }
 
 .layer-heading {
@@ -668,7 +656,7 @@ h3 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background:
-        linear-gradient(145deg, rgba(86, 214, 194, 0.08), transparent 40%),
+        linear-gradient(145deg, rgba(74, 140, 166, 0.12), transparent 40%),
         rgba(255, 255, 255, 0.045);
 }
 
@@ -685,7 +673,7 @@ h3 {
     position: relative;
     min-height: 230px;
     padding: 18px;
-    background: rgba(6, 11, 16, 0.72);
+    background: rgba(27, 38, 39, 0.78);
 }
 
 .architecture-node:not(:last-child)::after {
@@ -700,7 +688,7 @@ h3 {
 }
 
 .architecture-node p {
-    color: var(--accent-3);
+    color: var(--accent-2);
 }
 
 .architecture-node h3 {
@@ -730,7 +718,7 @@ h3 {
 }
 
 .workflow-section .section-label {
-    color: #18786d;
+    color: var(--accent-4);
 }
 
 .workflow-copy p {
@@ -747,7 +735,7 @@ h3 {
 .documentation-section .screenshot-frame,
 .admin-section .screenshot-frame,
 .artifact-section .screenshot-frame {
-    background: #101820;
+    background: var(--bg);
 }
 
 .numbered-flow {
@@ -775,13 +763,13 @@ h3 {
     width: 34px;
     height: 34px;
     border-radius: var(--radius);
-    color: #05120f;
+    color: #122021;
     background: var(--accent);
     font-size: 0.92rem;
 }
 
 .execution-section {
-    background: #080d13;
+    background: #152122;
 }
 
 .execution-grid {
@@ -838,19 +826,40 @@ h3 {
 
 .artifact-layout {
     display: grid;
-    grid-template-columns: minmax(540px, 1.32fr) minmax(340px, 0.68fr);
-    gap: 22px;
+    grid-template-columns: minmax(390px, 0.82fr) minmax(520px, 1.18fr);
+    gap: 26px;
     align-items: start;
 }
 
+.report-builder-frame {
+    align-self: start;
+}
+
+.report-builder-frame img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 58% 66%;
+    transform: scale(1.55);
+    transform-origin: 58% 66%;
+}
+
+.report-builder-frame:hover img {
+    transform: scale(1.59);
+}
+
+.report-output-frame {
+    align-self: start;
+}
+
 .report-output-frame img {
-    max-height: 530px;
+    width: 100%;
+    max-height: none;
     object-fit: contain;
-    background: #eef2ee;
+    background: #e7f1f6;
 }
 
 .admin-section {
-    background: #0b1017;
+    background: #172424;
 }
 
 .admin-layout {
@@ -883,7 +892,7 @@ h3 {
 
 .role-timeline article {
     padding: 22px;
-    background: #ffffff;
+    background: #f7fbfc;
 }
 
 .role-timeline h3 {
@@ -921,17 +930,17 @@ h3 {
 .impact-grid article:nth-child(1),
 .impact-grid article:nth-child(4),
 .impact-grid article:nth-child(7) {
-    border-color: rgba(86, 214, 194, 0.3);
+    border-color: rgba(74, 140, 166, 0.42);
 }
 
 .impact-grid article:nth-child(2),
 .impact-grid article:nth-child(5) {
-    border-color: rgba(240, 182, 90, 0.32);
+    border-color: rgba(42, 68, 59, 0.78);
 }
 
 .impact-grid article:nth-child(3),
 .impact-grid article:nth-child(6) {
-    border-color: rgba(141, 162, 255, 0.32);
+    border-color: rgba(196, 218, 231, 0.34);
 }
 
 .confidentiality-note {
@@ -960,9 +969,9 @@ h3 {
 .contact-section {
     padding-bottom: 118px;
     background:
-        linear-gradient(135deg, rgba(86, 214, 194, 0.12), transparent 34%),
-        linear-gradient(315deg, rgba(240, 182, 90, 0.1), transparent 36%),
-        #080d13;
+        linear-gradient(135deg, rgba(74, 140, 166, 0.16), transparent 34%),
+        linear-gradient(315deg, rgba(42, 68, 59, 0.36), transparent 36%),
+        #172424;
 }
 
 .contact-panel {
@@ -990,7 +999,7 @@ h3 {
 
 .site-footer {
     border-top: 1px solid var(--border);
-    background: #05080c;
+    background: #172424;
 }
 
 .footer-inner {
@@ -1026,13 +1035,20 @@ h3 {
 }
 
 @media (max-width: 1180px) {
+    .container {
+        padding: 0 28px;
+    }
+
     .hero h1 {
         font-size: 4rem;
     }
 
+    .split-layout,
+    .split-layout-reverse,
     .workflow-layout,
     .admin-layout {
         grid-template-columns: 1fr;
+        gap: 36px;
     }
 
     .hero-product-shot {
@@ -1225,8 +1241,8 @@ h3 {
     }
 
     .hero-product-shot {
-        width: calc(100vw - 24px);
-        max-width: none;
+        width: min(100%, 560px);
+        max-width: 100%;
         padding: 6px;
     }
 
@@ -1252,7 +1268,7 @@ h3 {
 
 @media (max-width: 480px) {
     .hero-product-shot {
-        width: calc(100vw - 16px);
+        width: 100%;
         padding: 4px;
     }
 
@@ -1264,7 +1280,7 @@ h3 {
     .workflow-copy h2,
     .contact-panel h2,
     .other-work-section h2 {
-        font-size: 2rem;
+        font-size: 1.92rem;
     }
 
     .hero-summary,
