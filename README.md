@@ -1,6 +1,6 @@
-# Tyler Sims ESP.App Case Study
+# Tyler Sims ESP.App Walkthrough
 
-Single-page case study site for Tyler Sims, focused on ESP.App: an internal operations control plane for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics.
+Single-page walkthrough site for Tyler Sims, focused on ESP.App: an internal operations control plane for energy-program workflows, workflow automation, scheduled execution, artifact generation, and operational analytics.
 
 ## Local use
 
